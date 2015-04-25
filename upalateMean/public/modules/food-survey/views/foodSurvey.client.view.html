@@ -1,0 +1,42 @@
+<!-- Food surevey
+	 @author Alan Ponte
+-->
+
+
+<section data-ng-controller="foodSurveyController">
+	<div class="page-header">
+		<h2>What Do You Eat?</h2>
+	</div>
+	<div class="col-md-12">
+		<form class="form-horizontal" data-ng-submit="submitSurvey()">
+			<fieldset>
+				<div class="form-group">
+					<div class="row">
+						<div class="col-md-3">
+							<h3>Yesterday {{currentDate}}</h3>
+							<div class="col-md-12">
+								<label class="form-control" for="breakfast"> Breakfast</label>
+								<div class="controls">
+									<input class="form-control" type="text" id="breakfastYesterday" placeholder="Breakfast" data-ng-model="yesterday.breakfast">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<label class="form-control" for="breakfast"> Lunch</label>
+								<div class="controls">
+									<input class="form-control" type="text" id="breakfastYesterday" placeholder="Lunch" data-ng-model="yesterday.lunch">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<label class="form-control" for="breakfast"> Lunch</label>
+								<div class="controls">
+									<input class="form-control" type="text" id="breakfastYesterday" placeholder="Lunch" data-ng-model="yesterday.lunch">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+
+		</form>
+	</div>
+</section>
