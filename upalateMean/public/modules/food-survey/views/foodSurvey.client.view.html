@@ -1,0 +1,96 @@
+<!-- Food surevey
+	 @author Alan Ponte
+-->
+
+<section data-ng-controller="foodSurveyController">
+	<div class="page-header">
+		<h2>What Do You Eat?</h2>
+	</div>
+	<div class="col-md-12">
+
+		<form class="form-horizontal" data-ng-submit="submitSurvey()">
+			<fieldset>
+				<div class="form-group">
+					<div class="row">
+						<div class="col-md-3">
+							<h3>{{yesterday}}</h3>
+							<div class="col-md-12">
+								<div class="controls">
+									<tags-input ng-model="yesterdayBreakfast" placeholder="breakfast">
+									<auto-complete source="loadTags($query)"></auto-complete>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="controls">
+									<tags-input ng-model="yesterdayLunch" placeholder="lunch">
+									<auto-complete source="loadTags($query)"></auto-complete>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="controls">
+									<tags-input ng-model="yesterdayDinner" placeholder="dinner">
+									<auto-complete source="loadTags($query)"></auto-complete>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<h3>{{dayBeforeYesterday}}</h3>
+							<div class="col-md-12">
+								<div class="controls">
+									<tags-input ng-model="dayBeforeYesterdayBreakfast" 
+											placeholder="breakfast">
+									<auto-complete source="loadTags($query)"></auto-complete>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="controls">
+									<tags-input ng-model="dayBeforeYesterdayLunch" 
+											placeholder="lunch">
+									<auto-complete source="loadTags($query)"></auto-complete>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="controls">
+									<tags-input ng-model="dayBeforeYesterdayDinner" 
+											placeholder="dinner">
+									<auto-complete source="loadTags($query)"></auto-complete>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<h3>{{twoDaysAgo}}</h3>
+							<div class="col-md-12">
+								<div class="controls">
+									<tags-input ng-model="twoDaysbeforeYesterdayBreakfast" 
+											placeholder="breakfast">
+									<auto-complete source="loadTags($query)"></auto-complete>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="controls">
+									<tags-input ng-model="twoDaysbeforeYesterdayLunch" 
+											placeholder="lunch">
+									<auto-complete source="loadTags($query)"></auto-complete>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="controls">
+									<tags-input ng-model="twoDaysbeforeYesterdayDinner" 
+											placeholder="dinner">
+									<auto-complete source="loadTags($query)"></auto-complete>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+						<input type="submit" class="btn btn-primary">
+					</div>
+				</div>
+			</fieldset>
+
+		</form>
+	</div>
+</section>
+
