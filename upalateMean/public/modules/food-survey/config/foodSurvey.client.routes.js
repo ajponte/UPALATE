@@ -9,7 +9,8 @@ angular.module('food-survey').config(['$stateProvider', '$urlRouterProvider',
 
 		$stateProvider.state('foodSurvey', {
 			url: '/foodSurvey',
-			templateUrl:'modules/food-survey/views/foodSurvey.client.view.html'
+			templateUrl:'modules/food-survey/views/foodSurvey.client.view.html',
+			controller:'foodSurveyController'
 		});
 	}
 ])

@@ -2,7 +2,6 @@
 	 @author Alan Ponte
 -->
 
-
 <section data-ng-controller="foodSurveyController">
 	<div class="page-header">
 		<h2>What Do You Eat?</h2>
@@ -13,26 +12,65 @@
 				<div class="form-group">
 					<div class="row">
 						<div class="col-md-3">
-							<h3>Yesterday {{currentDate}}</h3>
+							<h3>{{dates.yesterday}}</h3>
 							<div class="col-md-12">
-								<label class="form-control" for="breakfast"> Breakfast</label>
 								<div class="controls">
-									<input class="form-control" type="text" id="breakfastYesterday" placeholder="Breakfast" data-ng-model="yesterday.breakfast">
+									<input class="form-control" type="text" id="breakfastYesterday" placeholder="Breakfast" data-ng-model="yesterdayBreakfast">
 								</div>
 							</div>
 							<div class="col-md-12">
-								<label class="form-control" for="breakfast"> Lunch</label>
 								<div class="controls">
-									<input class="form-control" type="text" id="breakfastYesterday" placeholder="Lunch" data-ng-model="yesterday.lunch">
+									<input class="form-control" type="text" id="lunchYesterday" placeholder="Lunch" data-ng-model="yesterdayLunch">
 								</div>
 							</div>
 							<div class="col-md-12">
-								<label class="form-control" for="breakfast"> Lunch</label>
 								<div class="controls">
-									<input class="form-control" type="text" id="breakfastYesterday" placeholder="Lunch" data-ng-model="yesterday.lunch">
+									<input class="form-control" type="text" id="dinner.Yesterday" placeholder="Dinner" data-ng-model="yesterdayDinner">
 								</div>
 							</div>
 						</div>
+						<div class="col-md-3">
+							<h3>{{dates.dayBeforeYesterday}}</h3>
+							<div class="col-md-12">
+								<div class="controls">
+									<input class="form-control" type="text" id="breakfastDayBeforeYesterday" placeholder="Breakfast" 
+									data-ng-model="dayBeforeYesterday.breakfast">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="controls">
+									<input class="form-control" type="text" id="lunchDayBeforeYesterday" placeholder="Lunch" data-ng-model="dayBeforeYesterday.lunch">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="controls">
+									<input class="form-control" type="text" id="dinnerDayBeforeYesterday" placeholder="Dinner" data-ng-model="dayBeforeYesterday.dinner">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<h3>{{dates.twoDaysAgo}}</h3>
+							<div class="col-md-12">
+								<div class="controls">
+									<input class="form-control" type="text" id="breakfastYesterday" placeholder="Breakfast" data-ng-model="twoDaysAgo.breakfast">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="controls">
+									<input class="form-control" type="text" id="breakfastYesterday" placeholder="Lunch" data-ng-model="twoDaysAgo.lunch">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="controls">
+									<input class="form-control" type="text" id="dinnerTwoDaysAgo" placeholder="Dinner" data-ng-model="twoDaysAgo.dinner">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+						<input type="submit" class="btn btn-primary">
 					</div>
 				</div>
 			</fieldset>

@@ -1,0 +1,1 @@
+/** Connects to edamam API. */
