@@ -6,7 +6,7 @@
  
 .content {
 	margin-top: 2.5em;
-	background: white;
+	background: none;
 }
 
 .undecorated-link:hover {
@@ -23,7 +23,7 @@
 }
 
 .navbar-inverse {
-	background: #404040;
+	background: rgba(0, 0, 0, .75);
 	border: none;
 }
 
@@ -46,9 +46,10 @@
 	color: #404040;
 }
 
-/** Make the page background green*/
+/** Make the page background green */
 body {
 	background: #5CC423;
+	background-image: url("/modules/core/img/background/tomatoes.jpg");
 }
 
 /** Make paragraph text sans-serif in an easy-to-read font */
@@ -70,23 +71,29 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14pt;
 	font-weight: normal;
-	color: black;
+	color: #202020;
 	border-style: none;
 }
 
-/** Make the primary button brown when highlighted */
+/** Make the primary button orange when highlighted */
 .btn:hover {
-    background: #733C03;
+    background: #FFA500;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
-    color: white;
+    color: #202020;
 	font-size: 14pt;
 }
 
 /** Translucent box for displaying text over background images */
 .transparentBox {
-	background: rgba(0, 0, 0, 0.25);
+	background: rgba(0, 0, 0, .75);
 }
+
+.lead {
+	color: #5CC423;
+}
+
+
 
 
 
