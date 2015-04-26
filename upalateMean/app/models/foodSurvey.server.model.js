@@ -11,6 +11,9 @@ var mongoose = require('mongoose'),
 var FoodSurveySchema = new Schema({
 
 	yesterday: {
+		dateString: {
+			type: String
+		},
 		breakfast:  {
 			//type: String
 			type: Array
@@ -23,6 +26,9 @@ var FoodSurveySchema = new Schema({
 		}
 	},
 	dayBeforeYesterday: {
+		dateString: {
+			type: String
+		},
 		breakfast: {
 			type: Array
 		},
@@ -34,6 +40,9 @@ var FoodSurveySchema = new Schema({
 		}
 	},
 	twoDaysBeforeYesterday: {
+		dateString: {
+			type: String
+		},
 		breakfast: {
 			type: Array
 		},

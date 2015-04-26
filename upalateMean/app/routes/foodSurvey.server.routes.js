@@ -15,16 +15,19 @@ module.exports = function(app) {
 		// The constructor will save this object
 		var surveyObj = {
 			yesterday: {
+				dateString: survey.yesterday.dateString,
 				breakfast: survey.yesterday.breakfast,
 				lunch: survey.yesterday.lunch,
 				dinner: survey.yesterday.dinner
 			},
 			dayBeforeYesterday: {
+				dateString: survey.dayBeforeYesterday.dateString,
 				breakfast: survey.dayBeforeYesterday.breakfast,
 				lunch: survey.dayBeforeYesterday.lunch,
 				dinner: survey.dayBeforeYesterday.dinner
 			},
 			twoDaysBeforeYesterday: {
+				dateString: survey.twoDaysBeforeYesterday.dateString,
 				breakfast: survey.twoDaysBeforeYesterday.breakfast,
 				lunch: survey.twoDaysBeforeYesterday.lunch,
 				dinner: survey.twoDaysBeforeYesterday.dinner

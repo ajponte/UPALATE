@@ -109,6 +109,7 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 			console.log("yesterday: " + JSON.stringify($scope.yesterdayBreakfast));
 			var survey = {
 				yesterday: {
+					dateString: $scope.yesterday,
 					breakfast: (function() {
 						var arr = new Array();
 						for (var i = 0; i < $scope.yesterdayBreakfast.length; i += 1) {
@@ -132,6 +133,7 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 					})()
 				},
 				dayBeforeYesterday: {
+					dateString: $scope.dayBeforeYesterday,
 					breakfast: (function() {
 						var arr = new Array();
 						for (var i = 0; i < $scope.dayBeforeYesterdayBreakfast.length; i += 1) {
@@ -155,6 +157,7 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 					})()
 				},
 				twoDaysBeforeYesterday: {
+					dateString: $scope.twoDaysAgo,
 					breakfast: (function() {
 						var arr = new Array();
 						for (var i = 0; i < $scope.twoDaysbeforeYesterdayBreakfast.length; i += 1) {
