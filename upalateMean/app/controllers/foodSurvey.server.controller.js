@@ -5,11 +5,4 @@ var mongoose = require('mongoose'),
 	FoodSurvey   = mongoose.model('FoodSurvey');
 
 
-module.exports = function(app) {
-	app.post('/api/users/submitSurvey', function(req, res) {
-		var survey = req.body;
-		console.log('Surevey: ' + JSON.stringify(survey));
-	})
-};
-
 

@@ -98,10 +98,21 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 				yesterday: {
 					breakfast: $scope.yesterdayBreakfast,
 					lunch: $scope.yesterdayLunch,
-					dinner: $scope.dinnerYesterday
-				}
+					dinner: $scope.yesterdayDinner
+				},
+				dayBeforeYesterday: {
+					breakfast: $scope.dayBeforeYesterdayBreakfast,
+					lunch: $scope.dayBeforeYesterdayLunch,
+					dinner: $scope.dayBeforeYesterdayDinner
+				},
+				twoDaysBeforeYesterday: {
+					breakfast: $scope.twoDaysbeforeYesterdayBreakfast,
+					lunch: $scope.twoDaysbeforeYesterdayLunch,
+					dinner: $scope.twoDaysbeforeYesterdayDinner
+				},
+				user: $scope.Authentication.user._id
 			};
-
+			console.log(JSON.stringify($scope.Authentication.user.email));
 			$http.post('/api/users/submitSurvey', survey)
 				.success(function(data) {
 					console.log("data from post: " + JSON.stringify(data));
