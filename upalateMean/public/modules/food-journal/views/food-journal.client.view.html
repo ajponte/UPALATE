@@ -9,52 +9,75 @@
 							<div class="col-md-4">
 								<h4>Breakfast</h4>
 								<p style="color:white">
-									{{entry.yesterday.breakfast.toString().replace(/-/, " ")}}
+									<!--{{entry.yesterday.breakfast.toString().replace(/\-/, " ")}}-->
+									{{cleanString(entry.yesterday.breakfast.toString())}}
 								</p>
 							</div>
 							<div class="col-md-4">
 								<h4>Lunch</h4>
-								<p style="color:white">{{entry.yesterday.lunch.toString()}}</p>
+								<p style="color:white">
+									{{cleanString(entry.yesterday.lunch.toString())}}
+								</p>
 							</div>
 							<div class="col-md-4">
 								<h4>Dinner</h4>
-								<p style="color:white">{{entry.yesterday.dinner.toString()}}</p>
+								<p style="color:white">
+									{{cleanString(entry.yesterday.dinner.toString())}}
+								</p>
 							</div>
 					</div>
-
+					<hr>
 					<div class="row">
 						<h3>{{entry.dayBeforeYesterday.dateString}}</h3>
 							<div class="col-md-4">
 								<h4>Breakfast</h4>
-								<p style="color:white">{{entry.dayBeforeYesterday.breakfast.toString()}}</p>
+								<p style="color:white">
+									{{cleanString(entry.dayBeforeYesterday.breakfast.toString())}}
+								</p>
 							</div>
 							<div class="col-md-4">
 								<h4>Lunch</h4>
-								<p style="color:white">{{entry.dayBeforeYesterday.lunch.toString()}}</p>
+								<p style="color:white">
+									{{cleanString(entry.dayBeforeYesterday.lunch.toString())}}
+								</p>
 							</div>
 							<div class="col-md-4">
 								<h4>Dinner</h4>
-								<p style="color:white">{{entry.dayBeforeYesterday.dinner.toString()}}</p>
+								<p style="color:white">
+									{{cleanString(entry.dayBeforeYesterday.dinner.toString())}}
+								</p>
 							</div>
 					</div>
+					<hr>
 					<div class="row">
 						<h3>{{entry.twoDaysBeforeYesterday.dateString}}</h3>
 							<div class="col-md-4">
 								<h4>Breakfast</h4>
 								<p style="color:white">
-									{{entry.twoDaysBeforeYesterday.breakfast.toString()}}
+									{{cleanString(entry.twoDaysBeforeYesterday.breakfast.toString())}}
 								</p>
 							</div>
 							<div class="col-md-4">
 								<h4>Lunch</h4>
-								<p style="color:white">{{entry.twoDaysBeforeYesterday.lunch.toString()}}</p>
+								<p style="color:white">
+									{{cleanString(entry.twoDaysBeforeYesterday.lunch.toString())}}
+								</p>
 							</div>
 							<div class="col-md-4">
 								<h4>Dinner</h4>
-								<p style="color:white">{{entry.twoDaysBeforeYesterday.dinner.toString()}}</p>
+								<p style="color:white">
+									{{cleanString(entry.twoDaysBeforeYesterday.dinner.toString())}}
+								</p>
 							</div>
 					</div>
 				</span>
-			
 	</div>
+		<div class="row" id="dailyValue">
+			<h4>Daily Values</h4>
+				<div data-ng-repeat="guide in fdaGuides">
+					<label class="form-control">
+						{{guide.foodComponent}}
+					</label>	
+				</div>	
+		</div>
 </section>

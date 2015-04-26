@@ -10,5 +10,18 @@ angular.module('food-journal').controller('FoodJournalController', ['$scope', '$
 					$scope.entries = data;
 				});
 		};
+
+		$scope.cleanString = function(str) {
+			return str.replace(/[-]/g, " ");
+		};
+
+		$scope.getFdaGuides = function() {
+			$http.get('/api/foodData/fdaGuides')
+				.success(function(data) {
+					$scope.fdaGuides = data;
+				});
+		};
+
+
 	}
 ]);
