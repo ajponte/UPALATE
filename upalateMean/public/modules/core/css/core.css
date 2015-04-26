@@ -89,8 +89,18 @@ h1, h2, h3, h4, h5, h6 {
 	background: rgba(0, 0, 0, .75);
 }
 
+/** Make leading text green */
 .lead {
 	color: #5CC423;
+}
+
+.forgot-password {
+	font-size: 14pt;
+}
+
+/** Make links orange */
+a {
+	color: #FFA500;
 }
 
 

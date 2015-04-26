@@ -1,4 +1,37 @@
 <section class="row" data-ng-controller="AuthenticationController">
+  <form data-ng-submit="signin()" class="signin form-horizontal" autocomplete="off">
+  <div style="height:150px"></div>
+	<div class="jumbotron transparentBox">
+	  <div class="row">
+		<div class="col-md-4">
+		  <img src="modules/core/img/brand/icon.png" class="img-responsive">
+		</div>
+		<div class="col-md-8">
+		  <h2>Welcome Back!</h2>
+	      <br>
+	      <div class="row">
+	        <div class="col-md-4">
+	    	  <p class="lead">Username</p>
+	    	  <input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username" placeholder="Username">
+	        </div>
+	        <div class="col-md-4">
+	    	  <p class="lead">Password</p>
+	    	  <input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password" placeholder="Password">
+	      </div>
+	    </div>
+	  	<br>
+	    <div class="row">
+	      <div class="col-md-4">
+	      	<button type="submit" class="btn btn-primary">Sign in</button>
+	      	<br><br>
+	      	<div class="forgot-password">
+				<a href="/#!/password/forgot">Forgot your password?</a>
+			</div>
+	      </div>
+	    </div>
+	</form>
+	</div>
+	<!--
 	<h3 class="col-md-12 text-center">Sign in using your social accounts</h3>
 	<div class="col-md-12 text-center">
 		<a href="/auth/facebook" class="undecorated-link">
@@ -42,4 +75,5 @@
 			</fieldset>
 		</form>
 	</div>
+-->
 </section>
