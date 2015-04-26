@@ -1,6 +1,14 @@
+/** 
+ * core.css
+ * @author Karlina Beringer
+ * @description Front-end styles for the UPALATE app
+ */
+ 
 .content {
-	margin-top: 50px;
+	margin-top: 2.5em;
+	background: white;
 }
+
 .undecorated-link:hover {
 	text-decoration: none;
 }
@@ -13,3 +21,75 @@
 .ng-valid.ng-dirty{
     border-color:#78FA89;
 }
+
+.navbar-inverse {
+	background: #404040;
+	border: none;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #5CC423;
+    font-size: 16pt;
+}
+
+/** Make navigation bar elements orange when not hovered over */
+.navbar-inverse .nav > li > a {
+    color: #FFA500;
+ 	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: normal;
+}
+
+/** Make navifation bar elements white with dark text */
+.navbar-inverse .nav > li > a:hover, a:focus {
+	background: white;
+	color: #404040;
+}
+
+/** Make the page background green*/
+body {
+	background: #5CC423;
+}
+
+/** Make paragraph text sans-serif in an easy-to-read font */
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+}
+
+/** Make headings bold and brown */
+h1, h2, h3, h4, h5, h6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #733C03;
+}
+
+/** Make the primary button green when not highlighted */
+.btn-primary, .btn:focus, .btn:active {
+	background: #5CC423;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	font-weight: normal;
+	color: black;
+	border-style: none;
+}
+
+/** Make the primary button brown when highlighted */
+.btn:hover {
+    background: #733C03;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: white;
+	font-size: 14pt;
+}
+
+/** Translucent box for displaying text over background images */
+.transparentBox {
+	background: rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+
+
