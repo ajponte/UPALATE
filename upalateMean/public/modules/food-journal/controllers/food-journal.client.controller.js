@@ -1,8 +1,14 @@
 'use strict';
 
-angular.module('food-journal').controller('FoodJournalController', ['$scope',
-	function($scope) {
-		// Controller Logic
-		// ...
+angular.module('food-journal').controller('FoodJournalController', ['$scope', '$http',
+	function($scope, $http) {
+		$scope.entries = [];
+		$scope.getEntries = function() {
+			$http.get('/api/users/getSurveyData')
+				.success(function(data) {
+					console.log("got survey data: " + JSON.stringify(data));
+					$scope.entries = data;
+				});
+		};
 	}
 ]);

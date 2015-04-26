@@ -7,7 +7,8 @@ angular.module('food-journal').config(['$stateProvider',
 		$stateProvider.
 		state('food-journal', {
 			url: '/food-journal',
-			templateUrl: 'modules/food-journal/views/food-journal.client.view.html'
+			templateUrl: 'modules/food-journal/views/food-journal.client.view.html',
+			controller: 'FoodJournalController'
 		});
 	}
 ]);

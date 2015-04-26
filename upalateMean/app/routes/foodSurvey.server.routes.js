@@ -8,6 +8,14 @@ var FoodSurvey = mongoose.model('FoodSurvey');
 var User = mongoose.model('User');
 
 module.exports = function(app) {
+
+	app.get('/api/users/getSurveyData', function(req, res) {
+		FoodSurvey.find(function(err, doc) {
+			console.log("surveyData: " + JSON.stringify(doc));
+			res.jsonp(doc);
+		});
+	});
+
 	app.post('/api/users/submitSurvey', function(req, res) {
 		var survey = req.body;
 		console.log('Surevey: ' + JSON.stringify(survey));
