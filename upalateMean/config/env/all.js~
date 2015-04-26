@@ -6,11 +6,7 @@ module.exports = {
 		description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
 		keywords: 'MongoDB, Express, AngularJS, Node.js'
 	},
-<<<<<<< HEAD
-	port: process.env.PORT || 3080,
-=======
-	port: process.env.PORT || 9000,
->>>>>>> origin/imtootired
+	port: process.env.PORT || 3000,
 	templateEngine: 'swig',
 	sessionSecret: 'MEAN',
 	sessionCollection: 'sessions',
@@ -19,8 +15,6 @@ module.exports = {
 			css: [
 				'public/lib/bootstrap/dist/css/bootstrap.css',
 				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
-				'public/lib/ng-tags-input/ng-tags-input.min.css',
-				'public/lib/ng-tags-input/ng-tags-input.bootstrap.min.css',
 			],
 			js: [
 				'public/lib/angular/angular.js',
@@ -31,9 +25,7 @@ module.exports = {
 				'public/lib/angular-sanitize/angular-sanitize.js', 
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-				'public/lib/ngAutocomplete/src/ngAutocomplete.js',
-				'public/lib/ng-tags-input/ng-tags-input.js',
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js'
 			]
 		},
 		css: [

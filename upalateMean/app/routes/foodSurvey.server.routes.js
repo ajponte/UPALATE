@@ -33,7 +33,16 @@ module.exports = function(app) {
 		};
 		var foodSurvey = new FoodSurvey(surveyObj);
 		foodSurvey.save(survey, function(err, doc) {
+<<<<<<< HEAD
 			console.log('Saved survey!');
+=======
+			if (err) {
+				console.log('Error saving survey: ' + err);
+			} else {
+				console.log('Saved survey!');
+			}
+
+>>>>>>> origin/imtootired
 		});
 	});
 };
