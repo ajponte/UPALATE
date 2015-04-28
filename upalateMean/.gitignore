@@ -8,4 +8,10 @@ app/tests/coverage/
 .bower-*/
 .idea/
 
-/data/db
+upalate-dev.ns
+upalate-dev.0
+mongod.lock
+local.0	
+local.ns
+journal	
+_tmp

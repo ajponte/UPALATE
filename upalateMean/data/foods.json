@@ -1,10 +1,17 @@
 [
 	{"name": "Nabisco Chips Ahoy! Original Chocolate Chip",
       "ingredients": "UNBLEACHED ENRICHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE {VITAMIN B1}, RIBOFLAVIN {VITAMIN B2}, FOLIC ACID), SEMISWEET CHOCOLATE CHIPS (SUGAR, CHOCOLATE, COCOA BUTTER, DEXTROSE, SOY LECITHIN), SUGAR, SOYBEAN OIL, PARTIALLY HYDROGENATED COTTONSEED OIL, HIGH FRUCTOSE CORN SYRUP, LEAVENING (BAKING SODA, AMMONIUM PHOSPHATE), SALT, WHEY (FROM MILK), NATURAL AND ARTIFICIAL FLAVOR, CARAMEL COLOR.CONTAINS WHEAT, SOY, MILK.",
+<<<<<<< HEAD
       "nutritionContent": {
       	"servingSize": "33g", "calories": 160, "caloriesFromFat": 170,
       	 "%dailyValue":{
       	 	"totalFat": {"percent": 12, "amount": 8, 
+=======
+      "nutritianContent": {
+      	"servingSize": "33g", "calories": 160, "caloriesFromFat": 170,
+      	 "%dailyValue":{
+      	 	"totalFat": {"percent": 12, "amount": 8,
+>>>>>>> mergingAgain
       	 	"saturatedFat": {"percent": 13, "amount": 2.5},
       	 	"transFat": {"percent": 0, "amount": 0},
       	 	"monosaturatedFat": {"percent": 0, "amount": 2},
@@ -24,12 +31,22 @@
       }
 
 	},
+<<<<<<< HEAD
 	{"name": "McDonald's Big  Mac Burger",
       "ingredients": "Big Mac: BEEF PATTY, ONIONS, PICKLE SLICES, PASTEURIZED PROCESS AMERICAN CHEESE, BIG MAC SAUCE, SHREDDED LETTUCE, BIG MAC BUN",
       "nutritionContent": {
       	"servingSize": "", "calories": 467, "caloriesFromFat": "",
       	 "%dailyValue":{
       	 	"totalFat": {"percent": 35, "amount": 23, 
+=======
+
+	{"name": "McDonald's Big  Mac Burger",
+      "ingredients": "Big Mac: BEEF PATTY, ONIONS, PICKLE SLICES, PASTEURIZED PROCESS AMERICAN CHEESE, BIG MAC SAUCE, SHREDDED LETTUCE, BIG MAC BUN",
+      "nutritianContent": {
+      	"servingSize": "", "calories": 467, "caloriesFromFat": "",
+      	 "%dailyValue":{
+      	 	"totalFat": {"percent": 35, "amount": 23,
+>>>>>>> mergingAgain
       	 	"saturatedFat": {"percent": 40, "amount": 8},
       	 	"transFat": {"percent": "", "amount": 1.3},
       	 	"monosaturatedFat": {"percent": 0, "amount": 2},
@@ -51,4 +68,402 @@
 
 	},
 
+<<<<<<< HEAD
+=======
+
+
+      {"name": "Nabisco Oreo Cookies",
+      "ingredients": "SUGAR, UNBLEACHED ENRICHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE {VITAMIN B1}, RIBOFLAVIN {VITAMIN B2}, FOLIC ACID), HIGH OLEIC CANOLA AND/OR PALM AND/OR CANOLA OIL, COCOA (PROCESSED WITH ALKALI), HIGH FRUCTOSE CORN SYRUP, CORNSTARCH, LEAVENING (BAKING SODA AND/OR CALCIUM PHOSPHATE), SALT, SOY LECITHIN, VANILLIN--AN ARTIFICIAL FLAVOR, CHOCOLATE.",
+      "nutritianContent": {
+            "servingSize": "3 cookies", "calories": 160, "caloriesFromFat": 58,
+             "%dailyValue":{
+                  "totalFat": {"percent": 11, "amount": 7,
+                  "saturatedFat": {"percent": 10, "amount": 2},
+                  "transFat": {"percent": "", "amount": 0},
+                  "monosaturatedFat": {"percent": 0, "amount": 0},
+                  "cholesterol": {"percent": 0, "amount": 0},
+                  "sodium": {"percent": 8, "amount": 0.190},
+                  "potasium": {"percent": 0, "amount": 0},
+                  "totalCarbohydrate": {"percent": 8, "amount": 25},
+                  "dietaryFiber": {"percent": 4, "amount": 1},
+                  "sugars": {"percent": "", "amount": 14},
+                  "protien": {"percent": 4, "amount": 2},
+                  "vitaminA": {"percent": 0},
+                  "calcium": {"percent": 0},
+                  "vitaminC": {"percent": 0},
+                  "iron": {"percent": 10},
+                  "magnesium": {"percent": 0}
+             }
+            }
+      }
+
+      },
+
+      {"name": "Subway Chicken & Bacon Ranch Melt",
+      "ingredients": "Monterey cheddar cheese, tender all-white meat chicken, crispy bacon, lettuce, tomato, onions and green peppers.",
+      "nutritianContent": {
+            "servingSize": "289g", "calories": 570, "caloriesFromFat": 250,
+             "%dailyValue":{
+                  "totalFat": {"percent": "", "amount": 28,
+                  "saturatedFat": {"percent": "", "amount": 10},
+                  "transFat": {"percent": "", "amount": 0.5},
+                  "monosaturatedFat": {"percent": 0, "amount": 0},
+                  "cholesterol": {"percent": "", "amount": 95},
+                  "sodium": {"percent": "", "amount": 1.050},
+                  "potasium": {"percent": 0, "amount": 0},
+                  "totalCarbohydrate": {"percent":0, "amount": 44},
+                  "dietaryFiber": {"percent": "", "amount": 5},
+                  "sugars": {"percent": "", "amount": 8},
+                  "protien": {"percent": "", "amount": 35},
+                  "vitaminA": {"percent": 15},
+                  "calcium": {"percent": 50},
+                  "vitaminC": {"percent": 25},
+                  "iron": {"percent": 20},
+                  "magnesium": {"percent": 0}
+             }
+            }
+      }
+
+      },
+
+
+
+
+      {"name": "Subway Tuna",
+      "ingredients": "Flaked tuna, mayo, fresh vegetables",
+      "nutritianContent": {
+            "servingSize": "234g", "calories": 480, "caloriesFromFat": 210,
+             "%dailyValue":{
+                  "totalFat": {"percent": "", "amount": 25,
+                  "saturatedFat": {"percent": "", "amount": 4},
+                  "transFat": {"percent": "", "amount": 0},
+                  "monosaturatedFat": {"percent": 0, "amount": 0},
+                  "cholesterol": {"percent": "", "amount": 35},
+                  "sodium": {"percent": "", "amount": 0.600},
+                  "potasium": {"percent": 0, "amount": 0},
+                  "totalCarbohydrate": {"percent":"", "amount": 44},
+                  "dietaryFiber": {"percent": "", "amount": 5},
+                  "sugars": {"percent": "", "amount": 8},
+                  "protien": {"percent": "", "amount": 35},
+                  "vitaminA": {"percent": 15},
+                  "calcium": {"percent": 50},
+                  "vitaminC": {"percent": 25},
+                  "iron": {"percent": 20},
+                  "magnesium": {"percent": 0}
+             }
+            }
+      }
+
+      },
+
+
+
+      {"name": "Subway Meatball Marinara",
+      "ingredients": "meatballs, marinara sauce, freshly baked bread.",
+      "nutritianContent": {
+            "servingSize": "299g", "calories": 480, "caloriesFromFat": 160,
+             "%dailyValue":{
+                  "totalFat": {"percent": "", "amount": 18,
+                  "saturatedFat": {"percent": "", "amount": 7},
+                  "transFat": {"percent": "", "amount": 0.5},
+                  "monosaturatedFat": {"percent": 0, "amount": 0},
+                  "cholesterol": {"percent": "", "amount": 30},
+                  "sodium": {"percent": "", "amount": 0.92},
+                  "potasium": {"percent": 0, "amount": 0},
+                  "totalCarbohydrate": {"percent":"", "amount": 59},
+                  "dietaryFiber": {"percent": "", "amount": 8},
+                  "sugars": {"percent": "", "amount": 12},
+                  "protien": {"percent": "", "amount": 21},
+                  "vitaminA": {"percent": 25},
+                  "calcium": {"percent": 35},
+                  "vitaminC": {"percent": 35},
+                  "iron": {"percent": 25},
+                  "magnesium": {"percent": 0}
+             }
+            }
+      }
+
+      },
+
+
+      {"name": "Jamba Juice Acai Berry Bowl",
+      "ingredients": "Acai Juice Blend, Soymilk, Mixed Berry Juice, Frozen Strawberries, Frozen Blueberries, Fresh Bananas, Frozen Bananas, Fresh Strawberries, Honey, Fresh Blueberries, Almonds",
+      "nutritianContent": {
+            "servingSize": "", "calories": 370, "caloriesFromFat": "",
+             "%dailyValue":{
+                  "totalFat": {"percent": 10, "amount": 6,
+                  "saturatedFat": {"percent": 5, "amount": 1},
+                  "transFat": {"percent": "", "amount": 0},
+                  "monosaturatedFat": {"percent": 0, "amount": 0},
+                  "cholesterol": {"percent": "", "amount": 0},
+                  "sodium": {"percent": 1, "amount": 0.015},
+                  "potasium": {"percent": 0, "amount": 0},
+                  "totalCarbohydrate": {"percent":27, "amount": 80},
+                  "dietaryFiber": {"percent": 28, "amount": 7},
+                  "sugars": {"percent": "", "amount": 49},
+                  "protien": {"percent": "", "amount": 4},
+                  "vitaminA": {"percent": 8},
+                  "calcium": {"percent": 8},
+                  "vitaminC": {"percent": 450},
+                  "iron": {"percent": 10},
+                  "magnesium": {"percent": 0}
+             }
+            }
+      }
+
+      },
+
+
+
+
+      {"name": "Jamba Juice Acai Primo Bowl",
+      "ingredients": "Acai Juice, Soymilk, Frozen Bananas, Fresh Bananas,Ice, Frozen Strawberries, Frozen Blueberries, Organic Granola, Fresh Blueberries, Honey, Almonds, Coconut",
+      "nutritianContent": {
+            "servingSize": "", "calories": 440, "caloriesFromFat": "",
+             "%dailyValue":{
+                  "totalFat": {"percent": 18, "amount": 11,
+                  "saturatedFat": {"percent": 16, "amount": 3},
+                  "transFat": {"percent": "", "amount": 0},
+                  "monosaturatedFat": {"percent": 0, "amount": 0},
+                  "cholesterol": {"percent": "", "amount": 0},
+                  "sodium": {"percent": 1, "amount": 0.035},
+                  "potasium": {"percent": 0, "amount": 0},
+                  "totalCarbohydrate": {"percent":27, "amount": 80},
+                  "dietaryFiber": {"percent": 32, "amount": 8},
+                  "sugars": {"percent": "", "amount": 53},
+                  "protien": {"percent": "", "amount": 8},
+                  "vitaminA": {"percent": 8},
+                  "calcium": {"percent": 8},
+                  "vitaminC": {"percent": 390},
+                  "iron": {"percent": 15},
+                  "magnesium": {"percent": 0}
+             }
+            }
+      }
+
+      },
+
+
+      {"name": "Jamba Juice Chunky Strawberry Bowl",
+      "ingredients": "Soymilk, Frozen Strawberries, Frozen Bananas, Nonfat Greek Yogurt, Fresh Bananas, Organic Pumpkin Flax Seed Granola and Peanut Butter.",
+      "nutritianContent": {
+            "servingSize": "", "calories": 520, "caloriesFromFat": "",
+             "%dailyValue":{
+                  "totalFat": {"percent": 26, "amount": 17,
+                  "saturatedFat": {"percent": 13, "amount": 2.5},
+                  "transFat": {"percent": "", "amount": 0},
+                  "monosaturatedFat": {"percent": 0, "amount": 0},
+                  "cholesterol": {"percent": "", "amount": 0},
+                  "sodium": {"percent": 5, "amount": 0.125},
+                  "potasium": {"percent": 0, "amount": 0},
+                  "totalCarbohydrate": {"percent":27, "amount": 80},
+                  "dietaryFiber": {"percent": 37, "amount": 9},
+                  "sugars": {"percent": "", "amount": 44},
+                  "protien": {"percent": "", "amount": 17},
+                  "vitaminA": {"percent": 2},
+                  "calcium": {"percent": 15},
+                  "vitaminC": {"percent": 70},
+                  "iron": {"percent": 15},
+                  "magnesium": {"percent": 0}
+             }
+            }
+      }
+
+      },
+
+
+
+
+
+      {"name": "Jamba Juice Tropical Greens",
+      "ingredients": "Fresh Apple Juice, Fresh Pineapples, Fresh Supergreens (Organic Baby Spinach, Organic Red and Green Chard, Organic Baby Kale), Ice, Chia Seeds.",
+      "nutritianContent": {
+            "servingSize": "", "calories": 150, "caloriesFromFat": "",
+             "%dailyValue":{
+                  "totalFat": {"percent": 2, "amount": 1.5,
+                  "saturatedFat": {"percent": 0, "amount": 0},
+                  "transFat": {"percent": "", "amount": 0},
+                  "monosaturatedFat": {"percent": 0, "amount": 0},
+                  "cholesterol": {"percent": "", "amount": 0},
+                  "sodium": {"percent": 4, "amount": 0.085},
+                  "potasium": {"percent": 0, "amount": 0},
+                  "totalCarbohydrate": {"percent":11, "amount": 34},
+                  "dietaryFiber": {"percent": 16, "amount": 4},
+                  "sugars": {"percent": "", "amount": 28},
+                  "protien": {"percent": "", "amount": 3},
+                  "vitaminA": {"percent": 60},
+                  "calcium": {"percent": 10},
+                  "vitaminC": {"percent": 100},
+                  "iron": {"percent": 15},
+                  "magnesium": {"percent": 40}
+             }
+            }
+      }
+
+      },
+
+
+
+
+      {"name": "Jamba Juice Peach Mango Smoothie",
+      "ingredients": "Peach Juice Blend, Peaches, Mangos, Soymilk (Contains Soy), Balance Boost (Contains Soy & Milk), Lean Advantage Boost* (Contains Soy & Milk)",
+      "nutritianContent": {
+            "servingSize": "", "calories": 300, "caloriesFromFat": "",
+             "%dailyValue":{
+                  "totalFat": {"percent": 7, "amount": 4.5,
+                  "saturatedFat": {"percent": 3, "amount": 0.5},
+                  "transFat": {"percent": "", "amount": 0},
+                  "monosaturatedFat": {"percent": 0, "amount": 0},
+                  "cholesterol": {"percent": 8, "amount": 0.025},
+                  "sodium": {"percent": 3, "amount": 0.065},
+                  "potasium": {"percent": 0, "amount": 0},
+                  "totalCarbohydrate": {"percent":18, "amount": 55},
+                  "dietaryFiber": {"percent": 24, "amount": 6},
+                  "sugars": {"percent": "", "amount": 41},
+                  "protien": {"percent": "", "amount": 11},
+                  "vitaminA": {"percent": 90},
+                  "calcium": {"percent": 20},
+                  "vitaminC": {"percent": 70},
+                  "iron": {"percent": 15},
+                  "magnesium": {"percent": 0}
+             }
+            }
+      }
+
+      },
+
+
+
+      {"name": "Starbucks Double-Smoked Bacon, Cheddar & Egg Sandwich",
+      "ingredients": "croissant roll (unenriched wheat flour, butter [cream, natural flavor], water, milk, sugar, yeast, sea salt, eggs), fried egg patty (egg whites, egg yolks, milk, food starch-modified, salt, citric acid), smoked bacon (cured with: water, salt, sugar, sodium phosphate, natural flavor [water, natural flavors], sodium diacetate, sodium erythorbate, sodium nitrite), sharp cheddar cheese (pasteurized milk, cheese culture, salt, enzymes, color added).",
+      "nutritianContent": {
+            "servingSize": "153 fl oz", "calories": 540, "caloriesFromFat": 290,
+             "%dailyValue":{
+                  "totalFat": {"percent": 49, "amount": 32,
+                  "saturatedFat": {"percent": 90, "amount": 18},
+                  "transFat": {"percent": "", "amount": 1},
+                  "monosaturatedFat": {"percent": 0, "amount": 0},
+                  "cholesterol": {"percent": 73, "amount": 0.220},
+                  "sodium": {"percent": 39, "amount": 0.940},
+                  "potasium": {"percent": 0, "amount": 0},
+                  "totalCarbohydrate": {"percent":15, "amount": 44},
+                  "dietaryFiber": {"percent": 4, "amount": 1},
+                  "sugars": {"percent": "", "amount": 7},
+                  "protien": {"percent": "", "amount": 21},
+                  "vitaminA": {"percent": 8},
+                  "calcium": {"percent": 15},
+                  "vitaminC": {"percent": 0},
+                  "iron": {"percent": 10},
+                  "magnesium": {"percent": 0}
+             }
+            }
+      }
+
+      },
+
+
+
+      {"name": "Starbucks Reduced-Fat Turkey Bacon Breakfast Sandwich",
+      "ingredients": "wheat english muffin (water, organic whole wheat flour, organic enriched flour [wheat flour, niacin, reduced iron, riboflavin, thiamine mononitrate, folic acid], yeast, organic corn flour, organic evaporated cane sugar, organic wheat gluten, organic vinegar, sea salt, organic extra virgin olive oil, ascorbic acid, enzymes), egg white patty (egg whites, milk, unmodified corn starch, contains 2% or less of the following: salt, black pepper), turkey bacon (turkey, vinegar and lemon juice concentrate, water, brown sugar, honey, salt, potassium chloride, seasoning [sea salt, lactic acid starter culture, natural flavorings]), reduced fat cheddar cheese (pasteurized part-skim milk, cheese culture, salt, enzymes, vitamin a palmitate).",
+      "nutritianContent": {
+            "servingSize": "120g", "calories": 230, "caloriesFromFat": 50,
+             "%dailyValue":{
+                  "totalFat": {"percent": 9, "amount": 6,
+                  "saturatedFat": {"percent": 12, "amount": 2.5},
+                  "transFat": {"percent": "", "amount": 0},
+                  "monosaturatedFat": {"percent": 0, "amount": 0},
+                  "cholesterol": {"percent": 7, "amount": 0.020},
+                  "sodium": {"percent": 23, "amount": 0.560},
+                  "potasium": {"percent": 0, "amount": 0},
+                  "totalCarbohydrate": {"percent":9, "amount": 28},
+                  "dietaryFiber": {"percent": 8, "amount": 2},
+                  "sugars": {"percent": "", "amount": 3},
+                  "protien": {"percent": "", "amount": 13},
+                  "vitaminA": {"percent": 4},
+                  "calcium": {"percent": 15},
+                  "vitaminC": {"percent": 8},
+                  "iron": {"percent": 10},
+                  "magnesium": {"percent": 0}
+             }
+            }
+      }
+
+      },
+
+
+      {"name": "Starbucks Slow-Roasted Ham & Swiss Breakfast Sandwich",
+      "ingredients": "croissant roll (unenriched wheat flour, butter [cream, natural flavor], water, milk, sugar, yeast, sea salt, eggs), fried egg patty (egg whites, egg yolks, milk, food starch-modified, contains 2% or less of the following: salt, citric acid), prosciutto cotto (pork, water, salt, natural flavors, sugar), swiss cheese (cultured part-skim milk, salt, enzymes).",
+      "nutritianContent": {
+            "servingSize": "167g", "calories": 490, "caloriesFromFat": 220,
+             "%dailyValue":{
+                  "totalFat": {"percent": 38, "amount": 25,
+                  "saturatedFat": {"percent": 60, "amount": 12},
+                  "transFat": {"percent": "", "amount": 0},
+                  "monosaturatedFat": {"percent": 0, "amount": 0},
+                  "cholesterol": {"percent": 77, "amount": 0.230},
+                  "sodium": {"percent": 35, "amount": 0.830},
+                  "potasium": {"percent": 0, "amount": 0},
+                  "totalCarbohydrate": {"percent":15, "amount": 44},
+                  "dietaryFiber": {"percent": 8, "amount": 2},
+                  "sugars": {"percent": "", "amount": 9},
+                  "protien": {"percent": "", "amount": 20},
+                  "vitaminA": {"percent": 15},
+                  "calcium": {"percent": 15},
+                  "vitaminC": {"percent": 0},
+                  "iron": {"percent": 15},
+                  "magnesium": {"percent": 0}
+             }
+            }
+      }
+
+      },
+
+
+
+      {"name": "Starbucks Classic Whole-Grain Oatmeal",
+      "ingredients": "oatmeal (water, whole grain oatmeal [whole grain rolled oats, whole grain steel cut oats, whole grain oat flour, salt, calcium carbonate, guar gum].",
+      "nutritianContent": {
+            "servingSize": "42g", "calories": 160, "caloriesFromFat": 25,
+             "%dailyValue":{
+                  "totalFat": {"percent": 4, "amount": 2.5,
+                  "saturatedFat": {"percent": 2, "amount": 0.5},
+                  "transFat": {"percent": "", "amount": 0},
+                  "monosaturatedFat": {"percent": 0, "amount": 0},
+                  "cholesterol": {"percent": 0, "amount": 0},
+                  "sodium": {"percent": 0, "amount": 0},
+                  "potasium": {"percent": 0, "amount": 0},
+                  "totalCarbohydrate": {"percent":9, "amount": 28},
+                  "dietaryFiber": {"percent": 16, "amount": 4},
+                  "sugars": {"percent": "", "amount": 0},
+                  "protien": {"percent": "", "amount": 5},
+                  "vitaminA": {"percent": 0},
+                  "calcium": {"percent": 8},
+                  "vitaminC": {"percent": 0},
+                  "iron": {"percent": 15},
+                  "magnesium": {"percent": 0}
+             }
+            }
+      }
+
+      },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> mergingAgain
 ]

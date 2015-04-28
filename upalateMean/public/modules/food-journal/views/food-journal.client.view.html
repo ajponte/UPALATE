@@ -1,0 +1,87 @@
+<style type="text/css">
+
+.grid {
+  width: 500px;
+  height: 250px;
+}
+
+</style>
+
+<section data-ng-controller="FoodJournalController">
+	<div class="page-header">
+		<h2>My Food Journal</h2>
+	</div>
+	<div class="col-md-12" data-ng-init="getEntries()">
+				<span data-ng-repeat="entry in entries">
+					<div class="row">
+						<h3>{{entry.yesterday.dateString}}</h3>
+							<div class="col-md-4">
+								<h4>Breakfast</h4>
+								<p style="color:white">
+									{{cleanString(entry.yesterday.breakfast.toString())}}
+								</p>
+							</div>
+							<div class="col-md-4">
+								<h4>Lunch</h4>
+								<p style="color:white">
+									{{cleanString(entry.yesterday.lunch.toString())}}
+								</p>
+							</div>
+							<div class="col-md-4">
+								<h4>Dinner</h4>
+								<p style="color:white">
+									{{cleanString(entry.yesterday.dinner.toString())}}
+								</p>
+							</div>
+					</div>
+					<hr>
+					<div class="row">
+						<h3>{{entry.dayBeforeYesterday.dateString}}</h3>
+							<div class="col-md-4">
+								<h4>Breakfast</h4>
+								<p style="color:white">
+									{{cleanString(entry.dayBeforeYesterday.breakfast.toString())}}
+								</p>
+							</div>
+							<div class="col-md-4">
+								<h4>Lunch</h4>
+								<p style="color:white">
+									{{cleanString(entry.dayBeforeYesterday.lunch.toString())}}
+								</p>
+							</div>
+							<div class="col-md-4">
+								<h4>Dinner</h4>
+								<p style="color:white">
+									{{cleanString(entry.dayBeforeYesterday.dinner.toString())}}
+								</p>
+							</div>
+					</div>
+					<hr>
+					<div class="row">
+						<h3>{{entry.twoDaysBeforeYesterday.dateString}}</h3>
+							<div class="col-md-4">
+								<h4>Breakfast</h4>
+								<p style="color:white">
+									{{cleanString(entry.twoDaysBeforeYesterday.breakfast.toString())}}
+								</p>
+							</div>
+							<div class="col-md-4">
+								<h4>Lunch</h4>
+								<p style="color:white">
+									{{cleanString(entry.twoDaysBeforeYesterday.lunch.toString())}}
+								</p>
+							</div>
+							<div class="col-md-4">
+								<h4>Dinner</h4>
+								<p style="color:white">
+									{{cleanString(entry.twoDaysBeforeYesterday.dinner.toString())}}
+								</p>
+							</div>
+					</div>
+				</span>
+	</div>
+		<div class="row" id="dailyValue" data-ng-init="getFdaGuide()">
+			<h4>Daily Values</h4>
+				<div class="gridStyle" id="grid1" data-ui-grid=gridOptions></div>
+		</div>
+</section>

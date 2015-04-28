@@ -21,6 +21,7 @@ module.exports = {
 				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
 				'public/lib/ng-tags-input/ng-tags-input.min.css',
 				'public/lib/ng-tags-input/ng-tags-input.bootstrap.min.css',
+				'public/lib/angular-ui-grid/ui-grid.min.css',
 			],
 			js: [
 				'public/lib/angular/angular.js',
@@ -34,6 +35,8 @@ module.exports = {
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
 				'public/lib/ngAutocomplete/src/ngAutocomplete.js',
 				'public/lib/ng-tags-input/ng-tags-input.js',
+				'public/lib/angular-ui-grid/ui-grid.min.js',
+
 			]
 		},
 		css: [
