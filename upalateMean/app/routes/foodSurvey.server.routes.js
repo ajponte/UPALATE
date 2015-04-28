@@ -9,13 +9,16 @@ var User = mongoose.model('User');
 
 module.exports = function(app) {
 
-	app.get('/api/users/getSurveyData', function(req, res) {
-		FoodSurvey.find(function(err, doc) {
+	/** Returns the survey for the indicated user. */
+	app.post('/api/users/getSurveyData', function(req, res) {
+		var data = req.body;
+		FoodSurvey.find({"user": data.user}, function(err, doc) {
 			console.log("surveyData: " + JSON.stringify(doc));
 			res.jsonp(doc);
 		});
 	});
 
+	/** Submits the user's food survey. */
 	app.post('/api/users/submitSurvey', function(req, res) {
 		var survey = req.body;
 		console.log('Surevey: ' + JSON.stringify(survey));

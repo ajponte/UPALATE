@@ -1,12 +1,20 @@
+/** Controller for food journal view.
+ *  @author Alan Ponte
+ */
+
 'use strict';
 
-angular.module('food-journal').controller('FoodJournalController', ['$scope', '$http',
-	function($scope, $http) {
+angular.module('food-journal').controller('FoodJournalController', ['$scope', '$http', 'Authentication',
+	function($scope, $http, Authentication) {
 		$scope.entries = [];
+		$scope.fdaGuides = [];
+		$scope.Authentication = Authentication;
+		/** Returns the users food journal entries.  This will 
+		 *  initally be the information the user entered
+		 *  upon registration. */
 		$scope.getEntries = function() {
-			$http.get('/api/users/getSurveyData')
+			$http.post	('/api/users/getSurveyData', {user:$scope.Authentication.user._id})
 				.success(function(data) {
-					console.log("got survey data: " + JSON.stringify(data));
 					$scope.entries = data;
 				});
 		};
@@ -15,13 +23,22 @@ angular.module('food-journal').controller('FoodJournalController', ['$scope', '$
 			return str.replace(/[-]/g, " ");
 		};
 
-		$scope.getFdaGuides = function() {
+		/** Returns the FDA recommendations from Mongo. */
+		$scope.getFdaGuide = function() {
 			$http.get('/api/foodData/fdaGuides')
 				.success(function(data) {
 					$scope.fdaGuides = data;
 				});
 		};
 
-
+		$scope.gridOptions = {
+			data: 'fdaGuides',
+			columnDefs: [
+				{field: "foodComponent",
+				displayName: "Food Component"},
+				{field: "dv",
+				displayName: "% Daily Value"},
+			]
+		};
 	}
 ]);
