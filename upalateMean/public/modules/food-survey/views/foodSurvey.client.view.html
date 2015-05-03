@@ -1,12 +1,19 @@
 <!-- Food surevey
 	 @author Alan Ponte
--->
+-->	
+
+<style type="text/css">
+	#surveyDiv {
+		background-color: #CCFFFF;
+	}
+</style>
 
 <section data-ng-controller="foodSurveyController">
 	<div class="page-header">
 		<h2>What Do You Eat?</h2>
 	</div>
-	<div class="col-md-12">
+
+	<div class="col-md-12 panel panel-default" id="surveyDiv">
 
 		<form class="form-horizontal" data-ng-submit="submitSurvey()">
 			<fieldset>

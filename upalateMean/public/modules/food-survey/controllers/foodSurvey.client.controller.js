@@ -4,19 +4,23 @@
 /** Angular controller for the food survey.
  *  @author Alan Ponte
  */
-angular.module('food-survey').controller('foodSurveyController', ['$scope', '$http', '$resource','$window', '$location', 'Authentication',
-	function($scope, $http, $resource, $window, $location, Authentication) {
+angular.module('food-survey').controller('foodSurveyController', ['$scope', '$http', '$resource','$window', '$location', 'Authentication', 'FoodSurvey',
+	function($scope, $http, $resource, $window, $location, Authentication, FoodSurvey) {
 	var tags = $resource('foodNames.json');
 
-	  $scope.loadTags = function(query) {
-	    return tags.query().$promise;
-	  };
+	$scope.getAvailableFoods = FoodSurvey.get().then(function(data) {
+		console.log('foods from promise: ' + JSON.stringify(data));
+	});
 
-		$http.post('/api/foodData/availableFoods',{})
+	$scope.loadTags = function(query) {
+	    return tags.query().$promise;
+	};
+
+		/*$http.post('/api/foodData/availableFoods',{})
 			.success(function(data) {
 				$scope.availableFoods = data;
 				//console.log("food: " + JSON.stringify(data));
-		});
+		});*/
 
 		$scope.Authentication = Authentication;
 

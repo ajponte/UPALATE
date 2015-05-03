@@ -9,6 +9,7 @@ angular.module('food-journal').controller('FoodJournalController', ['$scope', '$
 		$scope.entries = [];
 		$scope.fdaGuides = [];
 		$scope.Authentication = Authentication;
+		
 		/** Returns the users food journal entries.  This will 
 		 *  initally be the information the user entered
 		 *  upon registration. */
