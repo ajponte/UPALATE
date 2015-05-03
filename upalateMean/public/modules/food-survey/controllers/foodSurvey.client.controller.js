@@ -28,9 +28,10 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 		/** Returns yesterdays date. */
 		$scope.yesterday = (function() {
 			var today = new Date();
+			today.setDate(today.getDate() - 1);
 			var day = today.getDay();
 			console.log("yesterday: " + day);
-			var dd = today.getDate() - 1;
+			var dd = today.getDate();
 			var mm = today.getMonth() + 1;
 			var yyyy = today.getFullYear();
 			if (dd < 10) {
@@ -39,15 +40,17 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 			if (mm < 10) {
 				mm = '0' + mm;
 			}
-			today = mm + '/' + dd + '/' + yyyy;
-			return getDayString(day, "yesterday") + ' ' + today;
+			return mm + '/' + dd + '/' + yyyy;
+			//today = mm + '/' + dd + '/' + yyyy;
+			//return getDayString(day, "yesterday") + ' ' + today;
 		})();
 
 		/** Returns the day before yesterday's date. */
 		$scope.dayBeforeYesterday = (function() {
 			var today = new Date();
+			today.setDate(today.getDate() - 2);
 			var day = today.getDay();
-			var dd = today.getDate() - 2;
+			var dd = today.getDate();
 			var mm = today.getMonth() + 1;
 			var yyyy = today.getFullYear();
 			if (dd < 10) {
@@ -57,15 +60,17 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 				mm = '0' + mm;
 			}
 			today = mm + '/' + dd + '/' + yyyy;
-			return getDayString(day, "dayBefore") + ' ' + today;
+			return today;
+			//return getDayString(day, "dayBefore") + ' ' + today;
 		})();
 
 		/** Returns a String of the date two days 
 		 *  ago from today. */
 		$scope.twoDaysAgo = (function() {
 			var today = new Date();
-			var day = today.getDay() % 7;
-			var dd = today.getDate() - 2;
+			today.setDate(today.getDate() - 3)
+			var day = today.getDay();
+			var dd = today.getDate();
 			var mm = today.getMonth() + 1;
 			var yyyy = today.getFullYear();
 			if (dd < 10) {
@@ -75,7 +80,8 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 				mm = '0' + mm;
 			}
 			today = mm + '/' + dd + '/' + yyyy;
-			return getDayString(day, "twoDaysBefore") + ' ' + today;
+			return today;
+			//return getDayString(day, "twoDaysBefore") + ' ' + today;
 		})();
 
 		/** Returns the String representation of 
