@@ -4,7 +4,7 @@
 var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'upalate';
-	var applicationModuleVendorDependencies = ['ngResource', 'ngCookies',  'ngAnimate','ngTagsInput',  'ngTouch',  'ngSanitize',  'ui.router', 'ui.grid', 'ui.bootstrap', 'ui.utils'];
+	var applicationModuleVendorDependencies = ['ngResource', 'ngCookies',  'ngAnimate','ngTagsInput',  'ngTouch',  'ngSanitize',  'ui.router', 'ui.grid', 'ui.bootstrap', 'ui.utils', 'googlechart'];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {

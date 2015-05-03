@@ -17,4 +17,18 @@ module.exports = function(app) {
 
 		});
 	});
+
+	app.post('/api/foodData/availableFoods/filter', function(req, res) {
+		var data = req.body;
+		console.log("DATA:  " + JSON.stringify(data));
+		AvailableFood.findOne(data, function(err, doc) {
+			if (err) {
+				console.log('error finding all food.');
+			} else {
+				console.log("food: " + JSON.stringify(doc));
+				res.jsonp(doc);
+			}
+
+		});
+	});
 }
