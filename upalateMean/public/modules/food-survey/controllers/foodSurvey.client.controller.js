@@ -8,9 +8,9 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 	function($scope, $http, $resource, $window, $location, Authentication, FoodSurvey, Availablefoods) {
 	var tags = $resource('foodNames.json');
 
-	$scope.getAvailableFoods = Availablefoods.get().then(function(data) {
+	/*$scope.getAvailableFoods = Availablefoods.get().then(function(data) {
 		console.log('foods from promise: ' + JSON.stringify(data));
-	});
+	});*/
 
 	$scope.loadTags = function(query) {
 	    return tags.query().$promise;
@@ -40,9 +40,8 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 			if (mm < 10) {
 				mm = '0' + mm;
 			}
-			return mm + '/' + dd + '/' + yyyy;
-			//today = mm + '/' + dd + '/' + yyyy;
-			//return getDayString(day, "yesterday") + ' ' + today;
+			today = mm + '/' + dd + '/' + yyyy;
+			return getDayString(day, "yesterday") + ' ' + today;
 		})();
 
 		/** Returns the day before yesterday's date. */
@@ -60,8 +59,7 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 				mm = '0' + mm;
 			}
 			today = mm + '/' + dd + '/' + yyyy;
-			return today;
-			//return getDayString(day, "dayBefore") + ' ' + today;
+			return getDayString(day, "dayBefore") + ' ' + today;
 		})();
 
 		/** Returns a String of the date two days 
@@ -80,8 +78,7 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 				mm = '0' + mm;
 			}
 			today = mm + '/' + dd + '/' + yyyy;
-			return today;
-			//return getDayString(day, "twoDaysBefore") + ' ' + today;
+			return getDayString(day, "twoDaysBefore") + ' ' + today;
 		})();
 
 		/** Returns the String representation of 
@@ -116,7 +113,6 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 
 		/** Submits the survey to Mongo. */
 		$scope.submitSurvey = function() {
-			console.log("yesterday: " + JSON.stringify($scope.yesterdayBreakfast));
 			var survey = {
 				yesterday: {
 					dateString: $scope.yesterday,
@@ -192,10 +188,8 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 				},
 				user: $scope.Authentication.user._id
 			};
-			console.log(JSON.stringify($scope.Authentication.user.email));
 			$http.post('/api/users/submitSurvey', survey)
 				.success(function(data) {
-					console.log("data from post: " + JSON.stringify(data));
 				});
 			$location.path('/settings/profile');
 		};
