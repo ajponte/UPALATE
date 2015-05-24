@@ -18,6 +18,7 @@ module.exports = {
 				'public/lib/ng-tags-input/ng-tags-input.min.css',
 				'public/lib/ng-tags-input/ng-tags-input.bootstrap.min.css',
 				'public/lib/angular-ui-grid/ui-grid.min.css',
+				'public/lib/angular-google-chart/style.css'
 			],
 			js: [
 				'public/lib/angular/angular.js',
@@ -32,7 +33,7 @@ module.exports = {
 				'public/lib/ngAutocomplete/src/ngAutocomplete.js',
 				'public/lib/ng-tags-input/ng-tags-input.js',
 				'public/lib/angular-ui-grid/ui-grid.min.js',
-
+				'public/lib/angular-google-chart/ng-google-chart.js'
 			]
 		},
 		css: [
