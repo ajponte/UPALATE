@@ -8,22 +8,11 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 	function($scope, $http, $resource, $window, $location, Authentication, FoodSurvey, Availablefoods) {
 	var tags = $resource('foodNames.json');
 
-	/*$scope.getAvailableFoods = Availablefoods.get().then(function(data) {
-		console.log('foods from promise: ' + JSON.stringify(data));
-	});*/
-
 	$scope.loadTags = function(query) {
 	    return tags.query().$promise;
 	};
 
-		/*$http.post('/api/foodData/availableFoods',{})
-			.success(function(data) {
-				$scope.availableFoods = data;
-				//console.log("food: " + JSON.stringify(data));
-		});*/
-
 		$scope.Authentication = Authentication;
-
 
 		/** Returns yesterdays date. */
 		$scope.yesterday = (function() {
@@ -118,23 +107,23 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 					dateString: $scope.yesterday,
 					breakfast: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.yesterdayBreakfast.length; i += 1) {
-							arr.push($scope.yesterdayBreakfast[i].text);
-						}
+						$scope.yesterdayBreakfast.forEach(function(element, index, list) {
+							arr.push(element.text);
+						});
 						return arr;
 					})(),
 					lunch: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.yesterdayLunch.length; i += 1) {
-							arr.push($scope.yesterdayLunch[i].text);
-						}
+						$scope.yesterdayLunch.forEach(function(element, index, list) {
+							arr.push(element.text);
+						}); 
 						return arr;
 					})(),
 					dinner: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.yesterdayDinner.length; i += 1) {
-							arr.push($scope.yesterdayDinner[i].text);
-						}
+						$scope.yesterdayDinner.forEach(function(element, index, list) {
+							arr.push(element.text);
+						});
 						return arr;
 					})()
 				},
@@ -142,23 +131,23 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 					dateString: $scope.dayBeforeYesterday,
 					breakfast: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.dayBeforeYesterdayBreakfast.length; i += 1) {
-							arr.push($scope.dayBeforeYesterdayBreakfast[i].text);
-						}
+						$scope.dayBeforeYesterdayBreakfast.forEach(function(element, index, list) {
+							arr.push(element.text);
+						});
 						return arr;
 					})(),
 					lunch: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.dayBeforeYesterdayLunch.length; i += 1) {
-							arr.push($scope.dayBeforeYesterdayLunch[i].text);
-						}
+						$scope.dayBeforeYesterdayLunch.forEach(function(element, index, list) {
+							arr.push(element.text);
+						});
 						return arr;
 					})(),
 					dinner: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.dayBeforeYesterdayDinner.length; i += 1) {
-							arr.push($scope.dayBeforeYesterdayDinner[i].text);
-						}
+						$scope.dayBeforeYesterdayDinner.forEach(function(element, index, list) {
+							arr.push(element.text);
+						});
 						return arr;
 					})()
 				},
@@ -166,23 +155,23 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 					dateString: $scope.twoDaysAgo,
 					breakfast: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.twoDaysbeforeYesterdayBreakfast.length; i += 1) {
-							arr.push($scope.twoDaysbeforeYesterdayBreakfast[i].text);
-						}
+						$scope.twoDaysbeforeYesterdayBreakfast.forEach(function(element, index, list) {
+							arr.push(element.text);
+						});
 						return arr;
 					})(),
 					lunch: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.twoDaysbeforeYesterdayLunch.length; i += 1) {
-							arr.push($scope.twoDaysbeforeYesterdayLunch[i].text);
-						}
+						$scope.twoDaysbeforeYesterdayLunch.forEach(function(element, index, list) {
+							arr.push(element.text);
+						});
 						return arr;
 					})(),
 					dinner: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.twoDaysbeforeYesterdayDinner.length; i += 1) {
-							arr.push($scope.twoDaysbeforeYesterdayDinner[i].text);
-						}
+						$scope.twoDaysbeforeYesterdayDinner.forEach(function(element, index, list) {
+							arr.push(element.text);
+						});
 						return arr;
 					})()
 				},

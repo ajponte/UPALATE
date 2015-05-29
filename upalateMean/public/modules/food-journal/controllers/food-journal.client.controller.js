@@ -10,14 +10,16 @@ angular.module('food-journal').controller('FoodJournalController', ['$scope', '$
 		$scope.fdaGuides = [];
 		$scope.Authentication = Authentication;
 		$scope.testQuery = {
-			"name": "McDonald's Big  Mac Burger"
+			"name": "Subway Chicken & Bacon Ranch Melt"
 		}
 		$scope.getBreakdown = function(query) {
 			if (!query) {
 				query = $scope.testQuery;
 			}
+
 			Availablefoods.getAvailableFoodsQuery(query)
 			.then(function(data) {
+				console.log("DATA: " + JSON.stringify(data));
 				$scope.foodData = data;
 				$scope.chartObject = {
 				  "type": "PieChart",
@@ -165,13 +167,14 @@ angular.module('food-journal').controller('FoodJournalController', ['$scope', '$
 		 *  initally be the information the user entered
 		 *  upon registration. */
 		$scope.getEntries = function() {
-			$http.post('/api/users/getSurveyData', {user:$scope.Authentication.user._id})
-				.success(function(data) {
+			FoodSurvey.getUserSurveyData($scope.Authentication.user._id)
+				.then(function(data) {
 					$scope.entries = data;
 				});
 		};
 
-
+		/** "Cleans" the String STR.  That is, removes all
+		 *   "-" from the string to make it display better. */
 		$scope.cleanString = function(str) {
 			return str.replace(/[-]/g, " ");
 		};
