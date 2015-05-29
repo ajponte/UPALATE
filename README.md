@@ -6,7 +6,8 @@ Crowd sourcing cultural broadening of horizons and aiding in the personal journe
 
 ## ABOUT ##
 To put it simply, Upalate is a nutrition app.
-The app has two goals:
+The app has two primary goals:
+
 1)  A repository for personal nutrition choices, and recommendations
     for healthier eating.
 
