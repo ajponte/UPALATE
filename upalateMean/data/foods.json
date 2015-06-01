@@ -1,75 +1,57 @@
 [
-	{"name": "Nabisco Chips Ahoy! Original Chocolate Chip",
+      {"name": "Nabisco Chips Ahoy! Original Chocolate Chip",
       "ingredients": "UNBLEACHED ENRICHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE {VITAMIN B1}, RIBOFLAVIN {VITAMIN B2}, FOLIC ACID), SEMISWEET CHOCOLATE CHIPS (SUGAR, CHOCOLATE, COCOA BUTTER, DEXTROSE, SOY LECITHIN), SUGAR, SOYBEAN OIL, PARTIALLY HYDROGENATED COTTONSEED OIL, HIGH FRUCTOSE CORN SYRUP, LEAVENING (BAKING SODA, AMMONIUM PHOSPHATE), SALT, WHEY (FROM MILK), NATURAL AND ARTIFICIAL FLAVOR, CARAMEL COLOR.CONTAINS WHEAT, SOY, MILK.",
-<<<<<<< HEAD
-      "nutritionContent": {
-      	"servingSize": "33g", "calories": 160, "caloriesFromFat": 170,
-      	 "%dailyValue":{
-      	 	"totalFat": {"percent": 12, "amount": 8, 
-=======
       "nutritianContent": {
-      	"servingSize": "33g", "calories": 160, "caloriesFromFat": 170,
-      	 "%dailyValue":{
-      	 	"totalFat": {"percent": 12, "amount": 8,
->>>>>>> mergingAgain
-      	 	"saturatedFat": {"percent": 13, "amount": 2.5},
-      	 	"transFat": {"percent": 0, "amount": 0},
-      	 	"monosaturatedFat": {"percent": 0, "amount": 2},
-      	 	"cholesterol": {"percent": 0, "amount": 0},
-      	 	"sodium": {"percent": 5, "amount": 0.11},
-      	 	"potasium": {"percent": 1, "amount": 0.45},
-      	 	"totalCarbohydrate": {"percent": 7, "amount": 22},
-      	 	"dietaryFiber": {"percent": 3, "amount": 1},
-      	 	"sugars": {"amount": 11},
-      	 	"protien": {"amount": 1},
-      	 	"vitaminA": {"percent": 0},
-      	 	"calcium": {"percent": 0},
-      	 	"vitaminC": {"percent": 0},
-      	 	"iron": {"percent": 6}
-      	 }
-      	}
+            "servingSize": "33g", "calories": 160, "caloriesFromFat": 170,
+             "%dailyValue":{
+                  "totalFat": {"percent": 12, "amount": 8,
+                  "saturatedFat": {"percent": 13, "amount": 2.5},
+                  "transFat": {"percent": 0, "amount": 0},
+                  "monosaturatedFat": {"percent": 0, "amount": 2},
+                  "cholesterol": {"percent": 0, "amount": 0},
+                  "sodium": {"percent": 5, "amount": 0.11},
+                  "potasium": {"percent": 1, "amount": 0.45},
+                  "totalCarbohydrate": {"percent": 7, "amount": 22},
+                  "dietaryFiber": {"percent": 3, "amount": 1},
+                  "sugars": {"amount": 11},
+                  "protien": {"amount": 1},
+                  "vitaminA": {"percent": 0},
+                  "calcium": {"percent": 0},
+                  "vitaminC": {"percent": 0},
+                  "iron": {"percent": 6}
+             }
+            }
       }
 
-	},
-<<<<<<< HEAD
-	{"name": "McDonald's Big  Mac Burger",
-      "ingredients": "Big Mac: BEEF PATTY, ONIONS, PICKLE SLICES, PASTEURIZED PROCESS AMERICAN CHEESE, BIG MAC SAUCE, SHREDDED LETTUCE, BIG MAC BUN",
-      "nutritionContent": {
-      	"servingSize": "", "calories": 467, "caloriesFromFat": "",
-      	 "%dailyValue":{
-      	 	"totalFat": {"percent": 35, "amount": 23, 
-=======
+      },
 
-	{"name": "McDonald's Big  Mac Burger",
+      {"name": "McDonald's Big  Mac Burger",
       "ingredients": "Big Mac: BEEF PATTY, ONIONS, PICKLE SLICES, PASTEURIZED PROCESS AMERICAN CHEESE, BIG MAC SAUCE, SHREDDED LETTUCE, BIG MAC BUN",
       "nutritianContent": {
-      	"servingSize": "", "calories": 467, "caloriesFromFat": "",
-      	 "%dailyValue":{
-      	 	"totalFat": {"percent": 35, "amount": 23,
->>>>>>> mergingAgain
-      	 	"saturatedFat": {"percent": 40, "amount": 8},
-      	 	"transFat": {"percent": "", "amount": 1.3},
-      	 	"monosaturatedFat": {"percent": 0, "amount": 2},
-      	 	"cholesterol": {"percent": 23, "amount": 0.70},
-      	 	"sodium": {"percent": 37, "amount": 0.9},
-      	 	"potasium": {"percent": 10, "amount": 0.384},
-      	 	"totalCarbohydrate": {"percent": 14, "amount": 42},
-      	 	"dietaryFiber": {"percent": 13, "amount": 3.4},
-      	 	"sugars": {"percent": "", "amount": 7},
-      	 	"protien": {"percent": 52, "amount": 26},
-      	 	"vitaminA": {"percent": 7},
-      	 	"calcium": {"percent": 24},
-      	 	"vitaminC": {"percent": 1},
-      	 	"iron": {"percent": 23},
-      	 	"magnesium": {"percent": 10}
-      	 }
-      	}
+            "servingSize": "", "calories": 467, "caloriesFromFat": "",
+             "%dailyValue":{
+                  "totalFat": {"percent": 35, "amount": 23,
+                  "saturatedFat": {"percent": 40, "amount": 8},
+                  "transFat": {"percent": "", "amount": 1.3},
+                  "monosaturatedFat": {"percent": 0, "amount": 2},
+                  "cholesterol": {"percent": 23, "amount": 0.70},
+                  "sodium": {"percent": 37, "amount": 0.9},
+                  "potasium": {"percent": 10, "amount": 0.384},
+                  "totalCarbohydrate": {"percent": 14, "amount": 42},
+                  "dietaryFiber": {"percent": 13, "amount": 3.4},
+                  "sugars": {"percent": "", "amount": 7},
+                  "protien": {"percent": 52, "amount": 26},
+                  "vitaminA": {"percent": 7},
+                  "calcium": {"percent": 24},
+                  "vitaminC": {"percent": 1},
+                  "iron": {"percent": 23},
+                  "magnesium": {"percent": 10}
+             }
+            }
       }
 
-	},
+      },
 
-<<<<<<< HEAD
-=======
 
 
       {"name": "Nabisco Oreo Cookies",
@@ -448,22 +430,4 @@
       },
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> mergingAgain
 ]
