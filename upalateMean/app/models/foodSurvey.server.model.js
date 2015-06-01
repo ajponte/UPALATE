@@ -15,15 +15,6 @@ var FoodSurveySchema = new Schema({
 			type: String
 		},
 		breakfast:  {
-<<<<<<< HEAD
-			type: String
-		},
-		lunch: {
-			type: String
-		},
-		dinner: {
-			type: String
-=======
 			//type: String
 			type: Array
 		},
@@ -32,7 +23,6 @@ var FoodSurveySchema = new Schema({
 		},
 		dinner: {
 			type: Array
->>>>>>> origin/imtootired
 		}
 	},
 	dayBeforeYesterday: {
@@ -40,15 +30,6 @@ var FoodSurveySchema = new Schema({
 			type: String
 		},
 		breakfast: {
-<<<<<<< HEAD
-			type: String
-		},
-		lunch: {
-			type: String
-		},
-		dinner: {
-			type: String
-=======
 			type: Array
 		},
 		lunch: {
@@ -56,7 +37,6 @@ var FoodSurveySchema = new Schema({
 		},
 		dinner: {
 			type: Array
->>>>>>> origin/imtootired
 		}
 	},
 	twoDaysBeforeYesterday: {
@@ -64,15 +44,6 @@ var FoodSurveySchema = new Schema({
 			type: String
 		},
 		breakfast: {
-<<<<<<< HEAD
-			type: String
-		},
-		lunch: {
-			type: String
-		},
-		dinner: {
-			type: String
-=======
 			type: Array
 		},
 		lunch: {
@@ -80,7 +51,6 @@ var FoodSurveySchema = new Schema({
 		},
 		dinner: {
 			type: Array
->>>>>>> origin/imtootired
 		}
 	},
 	user: {
