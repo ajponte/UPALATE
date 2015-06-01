@@ -1,4 +1,4 @@
-/** Routes for saving survey info.
+/** Routes for food survey info.
  *  @author Alan Ponte
  */
 

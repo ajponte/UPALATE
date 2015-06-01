@@ -11,14 +11,20 @@
 	<div class="page-header">
 		<h2>My Food Journal</h2>
 	</div>
-	<div class="col-md-12" data-ng-init="getEntries()">
+	<div class="col-md-12" 
+		data-ng-init="getEntries();getBreakdown()">
+
+		<div google-chart chart="chartObject"></div>
 				<span data-ng-repeat="entry in entries">
 					<div class="row">
 						<h3>{{entry.yesterday.dateString}}</h3>
 							<div class="col-md-4">
 								<h4>Breakfast</h4>
 								<p style="color:white">
-									{{cleanString(entry.yesterday.breakfast.toString())}}
+									{{
+										cleanString(entry.yesterday.breakfast.toString())
+									}}
+
 								</p>
 							</div>
 							<div class="col-md-4">

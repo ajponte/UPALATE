@@ -1,12 +1,28 @@
 <!-- Food surevey
 	 @author Alan Ponte
--->
+-->	
+
+<style type="text/css">
+	#surveyDiv {
+		background-color: #CCFFFF;
+	}
+	p {
+		color: white;
+	}
+</style>
 
 <section data-ng-controller="foodSurveyController">
 	<div class="page-header">
 		<h2>What Do You Eat?</h2>
+		<p>
+			Enter your meals for the last 3 days. <br>
+			The more information you enter, the more 
+			complete of a profile we can build for you.	
+		</p>	
 	</div>
-	<div class="col-md-12">
+
+	<div class="col-md-12 panel panel-default" id="surveyDiv">
+
 		<form class="form-horizontal" data-ng-submit="submitSurvey()">
 			<fieldset>
 				<div class="form-group">
@@ -16,19 +32,22 @@
 							<div class="col-md-12">
 								<div class="controls">
 									<tags-input ng-model="yesterdayBreakfast" placeholder="breakfast">
-									<auto-complete source="loadTags($query)"></auto-complete>
+									<auto-complete source="loadTags($query)" 
+											max-results-to-show="100"></auto-complete>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="controls">
 									<tags-input ng-model="yesterdayLunch" placeholder="lunch">
-									<auto-complete source="loadTags($query)"></auto-complete>
+									<auto-complete source="loadTags($query)"
+										max-results-to-show="100"></auto-complete>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="controls">
 									<tags-input ng-model="yesterdayDinner" placeholder="dinner">
-									<auto-complete source="loadTags($query)"></auto-complete>
+									<auto-complete source="loadTags($query)" 
+										max-results-to-show="100"></auto-complete>
 								</div>
 							</div>
 						</div>
@@ -38,21 +57,24 @@
 								<div class="controls">
 									<tags-input ng-model="dayBeforeYesterdayBreakfast" 
 											placeholder="breakfast">
-									<auto-complete source="loadTags($query)"></auto-complete>
+									<auto-complete source="loadTags($query)" 
+										max-results-to-show="100"></auto-complete>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="controls">
 									<tags-input ng-model="dayBeforeYesterdayLunch" 
 											placeholder="lunch">
-									<auto-complete source="loadTags($query)"></auto-complete>
+									<auto-complete source="loadTags($query)"
+										max-results-to-show="100"></auto-complete>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="controls">
 									<tags-input ng-model="dayBeforeYesterdayDinner" 
 											placeholder="dinner">
-									<auto-complete source="loadTags($query)"></auto-complete>
+									<auto-complete source="loadTags($query)" 
+										max-results-to-show="100"></auto-complete>
 								</div>
 							</div>
 						</div>
@@ -62,21 +84,24 @@
 								<div class="controls">
 									<tags-input ng-model="twoDaysbeforeYesterdayBreakfast" 
 											placeholder="breakfast">
-									<auto-complete source="loadTags($query)"></auto-complete>
+									<auto-complete source="loadTags($query)"
+										max-results-to-show="100"></auto-complete>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="controls">
 									<tags-input ng-model="twoDaysbeforeYesterdayLunch" 
 											placeholder="lunch">
-									<auto-complete source="loadTags($query)"></auto-complete>
+									<auto-complete source="loadTags($query)"
+										max-results-to-show="100"></auto-complete>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="controls">
 									<tags-input ng-model="twoDaysbeforeYesterdayDinner" 
 											placeholder="dinner">
-									<auto-complete source="loadTags($query)"></auto-complete>
+									<auto-complete source="loadTags($query)"
+										max-results-to-show="100"></auto-complete>
 								</div>
 							</div>
 						</div>

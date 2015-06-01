@@ -4,29 +4,23 @@
 /** Angular controller for the food survey.
  *  @author Alan Ponte
  */
-angular.module('food-survey').controller('foodSurveyController', ['$scope', '$http', '$resource','$window', '$location', 'Authentication',
-	function($scope, $http, $resource, $window, $location, Authentication) {
+angular.module('food-survey').controller('foodSurveyController', ['$scope', '$http', '$resource','$window', '$location', 'Authentication', 'FoodSurvey', 'Availablefoods',
+	function($scope, $http, $resource, $window, $location, Authentication, FoodSurvey, Availablefoods) {
 	var tags = $resource('foodNames.json');
 
-	  $scope.loadTags = function(query) {
+	$scope.loadTags = function(query) {
 	    return tags.query().$promise;
-	  };
-
-		$http.post('/api/foodData/availableFoods',{})
-			.success(function(data) {
-				$scope.availableFoods = data;
-				//console.log("food: " + JSON.stringify(data));
-		});
+	};
 
 		$scope.Authentication = Authentication;
-
 
 		/** Returns yesterdays date. */
 		$scope.yesterday = (function() {
 			var today = new Date();
+			today.setDate(today.getDate() - 1);
 			var day = today.getDay();
 			console.log("yesterday: " + day);
-			var dd = today.getDate() - 1;
+			var dd = today.getDate();
 			var mm = today.getMonth() + 1;
 			var yyyy = today.getFullYear();
 			if (dd < 10) {
@@ -42,8 +36,9 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 		/** Returns the day before yesterday's date. */
 		$scope.dayBeforeYesterday = (function() {
 			var today = new Date();
+			today.setDate(today.getDate() - 2);
 			var day = today.getDay();
-			var dd = today.getDate() - 2;
+			var dd = today.getDate();
 			var mm = today.getMonth() + 1;
 			var yyyy = today.getFullYear();
 			if (dd < 10) {
@@ -60,8 +55,9 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 		 *  ago from today. */
 		$scope.twoDaysAgo = (function() {
 			var today = new Date();
-			var day = today.getDay() % 7;
-			var dd = today.getDate() - 2;
+			today.setDate(today.getDate() - 3)
+			var day = today.getDay();
+			var dd = today.getDate();
 			var mm = today.getMonth() + 1;
 			var yyyy = today.getFullYear();
 			if (dd < 10) {
@@ -106,29 +102,28 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 
 		/** Submits the survey to Mongo. */
 		$scope.submitSurvey = function() {
-			console.log("yesterday: " + JSON.stringify($scope.yesterdayBreakfast));
 			var survey = {
 				yesterday: {
 					dateString: $scope.yesterday,
 					breakfast: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.yesterdayBreakfast.length; i += 1) {
-							arr.push($scope.yesterdayBreakfast[i].text);
-						}
+						$scope.yesterdayBreakfast.forEach(function(element, index, list) {
+							arr.push(element.text);
+						});
 						return arr;
 					})(),
 					lunch: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.yesterdayLunch.length; i += 1) {
-							arr.push($scope.yesterdayLunch[i].text);
-						}
+						$scope.yesterdayLunch.forEach(function(element, index, list) {
+							arr.push(element.text);
+						}); 
 						return arr;
 					})(),
 					dinner: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.yesterdayDinner.length; i += 1) {
-							arr.push($scope.yesterdayDinner[i].text);
-						}
+						$scope.yesterdayDinner.forEach(function(element, index, list) {
+							arr.push(element.text);
+						});
 						return arr;
 					})()
 				},
@@ -136,23 +131,23 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 					dateString: $scope.dayBeforeYesterday,
 					breakfast: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.dayBeforeYesterdayBreakfast.length; i += 1) {
-							arr.push($scope.dayBeforeYesterdayBreakfast[i].text);
-						}
+						$scope.dayBeforeYesterdayBreakfast.forEach(function(element, index, list) {
+							arr.push(element.text);
+						});
 						return arr;
 					})(),
 					lunch: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.dayBeforeYesterdayLunch.length; i += 1) {
-							arr.push($scope.dayBeforeYesterdayLunch[i].text);
-						}
+						$scope.dayBeforeYesterdayLunch.forEach(function(element, index, list) {
+							arr.push(element.text);
+						});
 						return arr;
 					})(),
 					dinner: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.dayBeforeYesterdayDinner.length; i += 1) {
-							arr.push($scope.dayBeforeYesterdayDinner[i].text);
-						}
+						$scope.dayBeforeYesterdayDinner.forEach(function(element, index, list) {
+							arr.push(element.text);
+						});
 						return arr;
 					})()
 				},
@@ -160,32 +155,30 @@ angular.module('food-survey').controller('foodSurveyController', ['$scope', '$ht
 					dateString: $scope.twoDaysAgo,
 					breakfast: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.twoDaysbeforeYesterdayBreakfast.length; i += 1) {
-							arr.push($scope.twoDaysbeforeYesterdayBreakfast[i].text);
-						}
+						$scope.twoDaysbeforeYesterdayBreakfast.forEach(function(element, index, list) {
+							arr.push(element.text);
+						});
 						return arr;
 					})(),
 					lunch: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.twoDaysbeforeYesterdayLunch.length; i += 1) {
-							arr.push($scope.twoDaysbeforeYesterdayLunch[i].text);
-						}
+						$scope.twoDaysbeforeYesterdayLunch.forEach(function(element, index, list) {
+							arr.push(element.text);
+						});
 						return arr;
 					})(),
 					dinner: (function() {
 						var arr = new Array();
-						for (var i = 0; i < $scope.twoDaysbeforeYesterdayDinner.length; i += 1) {
-							arr.push($scope.twoDaysbeforeYesterdayDinner[i].text);
-						}
+						$scope.twoDaysbeforeYesterdayDinner.forEach(function(element, index, list) {
+							arr.push(element.text);
+						});
 						return arr;
 					})()
 				},
 				user: $scope.Authentication.user._id
 			};
-			console.log(JSON.stringify($scope.Authentication.user.email));
 			$http.post('/api/users/submitSurvey', survey)
 				.success(function(data) {
-					console.log("data from post: " + JSON.stringify(data));
 				});
 
 			$location.path('/settings/profile');
