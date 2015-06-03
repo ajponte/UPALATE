@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/meanjs/mean.svg?branch=master)](http://upalate.me:8080/rssLatest)
+[![Build Status](http://upalate.me:8080/rssLatest)]
 # THIS IS THE MEAN STACK IMPLEMENTATION OF UPALATE #
 
 *Some of this text is taken from the meanjs webpage (http://meanjs.org)
