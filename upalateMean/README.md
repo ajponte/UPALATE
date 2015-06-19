@@ -53,14 +53,13 @@ After the install process is over, you'll be able to run your application using 
 $ grunt
 ```
 
-Your application should run on the 3000 port so in your browser just go to [http://localhost:3000](http://localhost:3000)
+Your application should run on the 9000 port so in your browser just go to [http://localhost:3000](http://localhost:9000)
 
 
 ```
 
 ## Getting Started With MEAN.JS
-You have your application running but there are a lot of stuff to understand, we recommend you'll go over the [Offical Documentation](http://meanjs.org/docs.html). 
-In the docs we'll try to explain both general concepts of MEAN components and give you some guidelines to help you improve your development procees. We tried covering as many aspects as possible, and will keep update it by your request, you can also help us develop the documentation better by checking out the *gh-pages* branch of this repository.
+You have the application running but there's a lot of stuff to understand, I recommend you go over the [Offical Documentation](http://meanjs.org/docs.html). 
 
 
 ## License
