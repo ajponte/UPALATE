@@ -15,3 +15,6 @@ local.0
 local.ns
 journal	
 _tmp
+
+#Unsure, gitignore ?
+package.json
