@@ -9,7 +9,6 @@ public class V1_status {
 	@GET
 	@Produces(MediaType.TEXT_HTML)
 	public String returnTitle() {
-		return "<p>Java Web Services</p>";
+		return "<p>Java Web Service</p>";
 	}
-	
 }
