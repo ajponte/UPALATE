@@ -22,7 +22,7 @@ public class UPalateAnalytics {
 				context = new InitialContext();
 			}
 			
-			UPalateAnalytics = (DataSource) context.lookup("jdbc/MongoDB");
+			UPalateAnalytics = (DataSource) context.lookup("jdbc/MongoDB2");
 			
 		} catch (Exception e) {
 			e.printStackTrace(); // todo: error catching

@@ -31,33 +31,30 @@ public class V1_status {
 	public String returnDatabaseStatus() throws Exception {
 		
 		PreparedStatement query = null;
-		StringBuilder output = (StringBuilder) new StringBuilder("DB TEST: ");
+		StringBuilder output = (StringBuilder) new StringBuilder("DB TEST: <br />Result:<br />");
 		Connection conn = null;
 		
 		try {
 			
 			conn = UPalateAnalytics.UPalateAnalyticsConn().getConnection();
-			query = conn.prepareStatement("SELECT * FROM system.indexes");
+			query = conn.prepareStatement("SELECT * FROM foods");
 			ResultSet rs = query.executeQuery();
 			
-			output.append(rs.getMetaData());
-//			
-//			
-//			while (rs.next()) {
-//				for(int i = 1; i <= rs.getMetaData().getColumnCount(); i++) {
-//					output.append(rs.getMetaData().getColumnName(i) + "=" + rs.getString(i));
-//				}
-//				
-////				myString = rs.getString("name");
-//			}
-//			
-//			output.append("ROWS: ").append(rs.toString());
-//			query.close();
-//			
-////			returnString = "DB first food name: " + myString;
+			while (rs.next()) {
+				for(int i = 1; i <= rs.getMetaData().getColumnCount(); i++) {
+					output.append(rs.getMetaData().getColumnName(i) + "=" + rs.getString(i));
+					output.append("<br />");
+				}
+				
+			}
+			
+			query.close();
+			
+//			returnString = "DB first food name: " + myString;
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+			output.append("CATCH:" + e.getMessage());
 		} finally {
 			if (conn != null) {
 				conn.close();
