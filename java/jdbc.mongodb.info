@@ -1,0 +1,5 @@
+JNDI name: jdbc/MongoDB
+Host: 127.0.01:27017
+Targets: AdminServer
+Driver class name: cdata.jdbc.mongodb.MongoDBDriver
+URL: jdbc:mongodb:Server=127.0.0.1;Port=27017;Database=upalate-dev;User=axuan;
