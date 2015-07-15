@@ -1,0 +1,19 @@
+Rename classes
+Upgrade from Jersey 1.x to 2.9
+JSON: use Google's GSON? jettison?
+-- abstract JSON converter classes for easy library switching
+Build or find Exception handler (at least, abstract one layer)
+Build or find Log handler
+Start determining Rest API functions & tree structure
+-- status
+	- version
+	- etc...
+-- foods
+	- ?
+-- users
+	- ?
+
+Mongo/JDBC: create class & determine better query building protocol/method
+
+ESAPI: Using 1.4.4 (deprecated!) for tutorial ONLY
+	- jersey encodes for us, still use esapi?
