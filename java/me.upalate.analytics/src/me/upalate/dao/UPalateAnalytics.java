@@ -1,7 +1,8 @@
 package me.upalate.dao;
 
 import javax.naming.*;
-import javax.sql.*;
+//import javax.sql.*;
+import java.sql.Connection;
 
 /*
  * TODO: implement logging

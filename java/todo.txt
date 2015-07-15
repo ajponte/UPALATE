@@ -14,6 +14,7 @@ Start determining Rest API functions & tree structure
 	- ?
 
 Mongo/JDBC: create class & determine better query building protocol/method
+Locales: put all strings into locale files (as on Android) for easy translation and less technical debt
 
 ESAPI: Using 1.4.4 (deprecated!) for tutorial ONLY
 	- jersey encodes for us, still use esapi?
