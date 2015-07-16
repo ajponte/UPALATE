@@ -1,7 +1,7 @@
 package me.upalate.dao;
 
 import javax.naming.*;
-//import javax.sql.*;
+import javax.sql.*;
 import java.sql.Connection;
 
 /*
@@ -12,7 +12,11 @@ public class UPalateAnalytics {
 	private static DataSource UPalateAnalytics = null;
 	private static Context context = null;
 	
-	public static DataSource UPalateAnalyticsConn() throws Exception {
+	// TODO: public for tutorial ... should be public, non-DAO classes should be retrofitted
+	/*
+	 * Lookup connection in JDBC
+	 */
+	/* private*/ public static DataSource UPalateAnalyticsConn() throws Exception {
 		
 		if (UPalateAnalytics != null) {
 			return UPalateAnalytics;
@@ -30,5 +34,21 @@ public class UPalateAnalytics {
 		}
 		
 		return UPalateAnalytics;
+	}
+	
+	/*
+	 * Create connection
+	 */
+	protected static Connection mongoUPalateConnection() {
+		Connection conn = null;
+		
+		try {
+			conn = UPalateAnalyticsConn().getConnection();
+			return conn;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return conn;
 	}
 }

@@ -17,6 +17,7 @@ import org.codehaus.jettison.json.JSONArray; // use Google GSON?
 import me.upalate.dao.UPalateAnalytics;
 import me.upalate.util.ToJSON;
 
+import me.upalate.dao.SchemaUPalate;
 
 @Path("/v2/inventory")
 public class V2_inventory {
@@ -24,41 +25,24 @@ public class V2_inventory {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response returnIngredients(
-				@QueryParam("food") String food)
-				throws Exception {
+									@QueryParam("food") String food
+									) throws Exception {
 		
 		JSONArray json = new JSONArray();
 		String returnString = null;
 		
-		PreparedStatement query = null;
-		Connection conn = null;
-		Response rb = null;
-		
 		try {
 			
-			conn = UPalateAnalytics.UPalateAnalyticsConn().getConnection();
-			query = conn.prepareStatement("SELECT * FROM foods");
+			SchemaUPalate dao = new SchemaUPalate();
 			
-			ResultSet rs = query.executeQuery();
-			
-			ToJSON converter = new ToJSON();
-			JSONArray json = new JSONArray();
-			
-			json = converter.toJSONArray(rs);
-			query.close();
-			
-			returnString = json.toString();
-			rb = Response.ok(returnString).build();
+			json = dao.queryReturnFoodNutrition(food);
+			returnString = json.toString() + "food: " + food;
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 			return Response.status(500).entity("Server was not able to process your request").build();
-		} finally {
-			if (conn != null) {
-				conn.close();
-			}
 		}
-		
-		return rb;
-	
+		 
+		return Response.ok(returnString).build();
+	}
 }
