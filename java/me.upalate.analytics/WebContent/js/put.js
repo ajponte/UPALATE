@@ -9,28 +9,19 @@
 $(document).ready(function() {
 	
 	var $put_example = $('#put_example')
-		, $SET_PC_PARTS_MAKER = $('#SET_PC_PARTS_MAKER')
-		, $SET_PC_PARTS_CODE = $('#SET_PC_PARTS_CODE');
+		, $SET_FOOD_NAME = $('#SET_FOOD_NAME');
 	
 	getInventory();
 	
 	$(document.body).on('click', ':button, .UPDATE_BTN', function(e) {
 		//console.log(this);
 		var $this = $(this)
-			, PC_PARTS_PK = $this.val()
+			, FOODS_PK = $this.val()
 			, $tr = $this.closest('tr')
-			, PC_PARTS_MAKER = $tr.find('.CL_PC_PARTS_MAKER').text()
-			, PC_PARTS_CODE = $tr.find('.CL_PC_PARTS_CODE').text()
-			, PC_PARTS_TITLE = $tr.find('.CL_PC_PARTS_TITLE').text()
-			, PC_PARTS_AVAIL = $tr.find('.CL_PC_PARTS_AVAIL').text()
-			, PC_PARTS_DESC = $tr.find('.CL_PC_PARTS_DESC').text();
+			, FOOD_NAME = $tr.find('.CL_FOOD_NAME').text();
 		
-		$('#SET_PC_PARTS_PK').val(PC_PARTS_PK);
-		$SET_PC_PARTS_MAKER.text(PC_PARTS_MAKER);
-		$SET_PC_PARTS_CODE.text(PC_PARTS_CODE);
-		$('#SET_PC_PARTS_TITLE').text(PC_PARTS_TITLE);
-		$('#SET_PC_PARTS_AVAIL').val(PC_PARTS_AVAIL);
-		$('#SET_PC_PARTS_DESC').text(PC_PARTS_DESC);
+		$('#SET_FOODS_PK').val(FOODS_PK);
+		$SET_FOOD_NAME.text(FOOD_NAME);
 		
 		$('#update_response').text("");
 	});
@@ -39,29 +30,28 @@ $(document).ready(function() {
 		e.preventDefault(); //cancel form submit
 		
 		var obj = $put_example.serializeObject()
-			, PC_PARTS_MAKER = $SET_PC_PARTS_MAKER.text()
-			, PC_PARTS_CODE = $SET_PC_PARTS_CODE.text();
+			, FOOD_NAME = $SET_FOOD_NAME.text();
 		
-		updateInventory(obj, PC_PARTS_MAKER, PC_PARTS_CODE);
+		updateInventory(obj, FOOD_NAME);
 	});
 });
 
-function updateInventory(obj, maker, code) {
+function updateInventory(obj, name) {
 	
 	ajaxObj = {  
 			type: "PUT",
-			url: "http://localhost:7001/com.youtube.rest/api/v3/inventory/" + maker + "/" + code,
+			url: "http://localhost:7001/me.upalate.analytics/api/v3/inventory/" + name,
 			data: JSON.stringify(obj), 
 			contentType:"application/json",
 			error: function(jqXHR, textStatus, errorThrown) {
 				console.log(jqXHR.responseText);
 			},
 			success: function(data) {
-				//console.log(data);
+				console.log(data);
 				$('#update_response').text( data[0].MSG );
 			},
 			complete: function(XMLHttpRequest) {
-				//console.log( XMLHttpRequest.getAllResponseHeaders() );
+				console.log( XMLHttpRequest.getAllResponseHeaders() );
 				getInventory();
 			}, 
 			dataType: "json" //request JSON
@@ -77,18 +67,18 @@ function getInventory() {
 	
 	ajaxObj = {  
 			type: "GET",
-			url: "http://localhost:7001/com.youtube.rest/api/v1/inventory", 
+			url: "http://localhost:7001/me.upalate.analytics/api/v1/inventory", 
 			data: "ts="+n, 
 			contentType:"application/json",
 			error: function(jqXHR, textStatus, errorThrown) {
 				console.log(jqXHR.responseText);
 			},
 			success: function(data) { 
-				//console.log(data);
+				console.log(data);
 				var html_string = "";
 				
 				$.each(data, function(index1, val1) {
-					//console.log(val1);
+					console.log(val1);
 					html_string = html_string + templateGetInventory(val1);
 				});
 				
@@ -105,12 +95,8 @@ function getInventory() {
 
 function templateGetInventory(param) {
 	return '<tr>' +
-				'<td class="CL_PC_PARTS_MAKER">' + param.PC_PARTS_MAKER + '</td>' +
-				'<td class="CL_PC_PARTS_CODE">' + param.PC_PARTS_CODE + '</td>' +
-				'<td class="CL_PC_PARTS_TITLE">' + param.PC_PARTS_TITLE + '</td>' +
-				'<td class="CL_PC_PARTS_AVAIL">' + param.PC_PARTS_AVAIL + '</td>' +
-				'<td class="CL_PC_PARTS_DESC">' + param.PC_PARTS_DESC + '</td>' +
-				'<td class="CL_PC_PARTS_BTN"> <button class="UPDATE_BTN" value=" ' + param.PC_PARTS_PK + ' " type="button">Update</button> </td>' +
+				'<td class="CL_FOOD_NAME">' + param.name + '</td>' +
+				'<td class="CL_FOODS_BTN"> <button class="UPDATE_BTN" value=" ' + param.FOODS_PK + ' " type="button">Update</button> </td>' +
 			'</tr>';
 }
 

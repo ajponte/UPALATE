@@ -9,7 +9,6 @@ import me.upalate.util.ToJSON;
 // TODO: abstract one layer? (to avoid extending all classes?)
 public class SchemaUPalate extends UPalateAnalytics {
 
-	
 	public int insertIntoFoods(String food) throws Exception {
 		
 		PreparedStatement query = null;
@@ -91,4 +90,64 @@ public class SchemaUPalate extends UPalateAnalytics {
 		return json;
 	}
 	
+	/**
+	 * TODO: see todo.txt
+	 * @param food_name
+	 * @param ingredients
+	 * @return
+	 * @throws Exception
+	 */
+	public int updateFoodIngredients(String food_name, String ingredients) throws Exception {
+	
+		PreparedStatement query = null;
+		Connection conn = null;
+		
+		try {
+			// validate ...
+			
+			conn = mongoUPalateConnection();
+			
+			StringBuilder querySQL = new StringBuilder("UPDATE `foods`")
+													.append(" SET `ingredients` = ?)")
+													.append(" WHERE name = ? ");
+			query = conn.prepareStatement(querySQL.toString());
+			query.setString(1, ingredients);
+			query.setString(2, food_name);
+			query.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return 500;
+		} finally {
+			if (conn != null) conn.close();
+		}
+		
+		return 200;
+	}
+	
+	public int deleteFood(String food_name) throws Exception {
+		
+		PreparedStatement query = null;
+		Connection conn = null;
+		
+		try {
+			// validate ...
+			
+			conn = mongoUPalateConnection();
+			
+			StringBuilder querySQL = new StringBuilder("DELETE FROM `foods`")
+													.append(" WHERE name = ? ");
+			query = conn.prepareStatement(querySQL.toString());
+			query.setString(1, food_name);
+			query.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return 500;
+		} finally {
+			if (conn != null) conn.close();
+		}
+		
+		return 200;
+	}
 }

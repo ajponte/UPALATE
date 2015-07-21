@@ -1,3 +1,9 @@
+### NOTES ###
+
+# CHRIS #
+-- put.html does not function to update:: got lazy and figured we wouldn't use this JS anyway
+	... the important part being that we understand how the AJAX process works with the Java RestAPI
+
 ### TEAM TIPS ###
 
 # CHRIS #
