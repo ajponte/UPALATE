@@ -1,9 +1,19 @@
+### TEAM TIPS ###
+
+# CHRIS #
+Make a shortcut command to start WLS (ex: 'upwlsstart') and use grep "LOG", i use this to red highlight my logs in the console
+
+
+### // TEAM TIPS ###
+
 Rename classes
 Upgrade from Jersey 1.x to 2.9
 JSON: use Google's GSON? jettison?
 -- abstract JSON converter classes for easy library switching
-Build or find Exception handler (at least, abstract one layer)
-Build or find Log handler
+Build or find Exception handler (at least, abstract one layer for easy modification)
+Build or find Log handler (same, abstract one layer for easy switching)
+	-- code ex: log.i("GET: v1/status")
+	-- log.d etc ...
 Start determining Rest API functions & tree structure
 -- status
 	- version
@@ -12,9 +22,12 @@ Start determining Rest API functions & tree structure
 	- ?
 -- users
 	- ?
+Should we use ENUMs for naming paths? @Path("v1/status") ... @Path(Api.VERSION + Api.FOODS + Api.GetFoodAction) // or something like that
 
 Mongo/JDBC: create class & determine better query building protocol/method
 Locales: put all strings into locale files (as on Android) for easy translation and less technical debt
 
 ESAPI: Using 1.4.4 (deprecated!) for tutorial ONLY
 	- jersey encodes for us, still use esapi?
+
+column `nutritianContent` : correct name (nutrition) and formation (subcolumns end up blackslashed so not JSONized)
