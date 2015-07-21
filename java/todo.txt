@@ -6,6 +6,7 @@ Make a shortcut command to start WLS (ex: 'upwlsstart') and use grep "LOG", i us
 
 ### // TEAM TIPS ###
 
+/!\ Cleaner modularization ... obviously this is just following the tutorial
 Rename classes
 Upgrade from Jersey 1.x to 2.9
 JSON: use Google's GSON? jettison?
@@ -26,6 +27,7 @@ Should we use ENUMs for naming paths? @Path("v1/status") ... @Path(Api.VERSION +
 
 Mongo/JDBC: create class & determine better query building protocol/method
 Locales: put all strings into locale files (as on Android) for easy translation and less technical debt
+Implement cache function (with variable expiration length) to alleviate DB queries ?
 
 ESAPI: Using 1.4.4 (deprecated!) for tutorial ONLY
 	- jersey encodes for us, still use esapi?

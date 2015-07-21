@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Rest Example: Post</title>
+	
+	<script src="js/jquery-min.js"></script>
+	<script src="js/polyfill.js"></script>
+	<script src="js/post.js"></script>
+</head>
+<body>
+
+<h1>API Post Example (quickly modified for UPalate)</h1>
+
+<form id="post_example" name="post_example" action="#">
+	<p><i>Obviously field and column names will need a better naming convention etc...</i></p>
+	<table>
+		<tr>
+			<td>FOOD NAME</td>
+			<td><input type="text" name="name" id="name" maxlength="100" value="Weed edible"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="button" name="submit_it" id="submit_it" value="Submit"> Using Jackson Mapper</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="button" name="submit_it2" id="submit_it2" value="Submit v2"> Using JSON Array and Object</td>
+		</tr>
+	</table>
+</form>
+
+<hr /><br />
+<div id="div_ajaxResponse">(AJAX RESP WILL BE HERE)</div>
+
+</body>
+</html>

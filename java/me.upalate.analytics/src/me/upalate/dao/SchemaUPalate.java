@@ -2,11 +2,46 @@ package me.upalate.dao;
 
 import java.sql.*;
 import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONObject;
+
 import me.upalate.util.ToJSON;
 
 // TODO: abstract one layer? (to avoid extending all classes?)
 public class SchemaUPalate extends UPalateAnalytics {
 
+	
+	public int insertIntoFoods(String food) throws Exception {
+		
+		PreparedStatement query = null;
+		Connection conn = null;
+		
+		try {
+			// validate data here ...
+			JSONObject nutritionJSON = new JSONObject(); // empty nutritionContent JSON obj ...
+			
+			conn = mongoUPalateConnection();
+			StringBuilder querySQL = new StringBuilder("INSERT INTO `foods`")
+											.append(" (`name`, `nutritianContent`)")
+											.append(" VALUES (?, ?) ");
+			query = conn.prepareStatement(querySQL.toString());
+			
+			query.setString(1, food);
+			query.setString(2, nutritionJSON.toString());
+			
+			query.executeUpdate(); // catch rows affected?
+			
+		} catch (Exception e) { // catch sql exception?
+			e.printStackTrace();
+			return 500; // ?
+		} finally {
+			if (conn != null) {
+				conn.close();
+			}
+		}
+		
+		return 200;
+	}
+	
 	public JSONArray queryReturnFoodNutrition(String food) throws Exception {
 		
 		PreparedStatement query = null;
@@ -34,7 +69,7 @@ public class SchemaUPalate extends UPalateAnalytics {
 //			query.setString(1, food.toUpperCase());
 			query.setString(1, food);
 			
-			System.out.println("ULOG:"+ querySQL.toString());
+			System.out.println("ULOG:"+ querySQL.toString()); // make log class ...
 			
 			ResultSet rs = query.executeQuery();
 			
