@@ -1,8 +1,8 @@
 {
 	"name": "upalate",
-	"description": "Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js",
+	"description": "A food app.",
 	"version": "0.0.1",
-	"author": "TheBoss",
+	"author": "UPALATE team",
 	"engines": {
 		"node": "0.10.x",
 		"npm": "1.4.x"

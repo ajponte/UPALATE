@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="me.upalate.analytics">
+    <wb-module deploy-name="com.308tube.rest">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="me.upalate.analytics"/>
-        <property name="java-output-path" value="/me.upalate.analytics/build/classes"/>
+        <property name="java-output-path" value="/com.308tube.rest/build/classes"/>
+        <property name="context-root" value="com.308tube.rest"/>
     </wb-module>
 </project-modules>
