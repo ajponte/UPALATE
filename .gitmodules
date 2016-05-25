@@ -1,0 +1,3 @@
+[submodule "trafficker"]
+	path = trafficker
+	url = https://github.com/ajponte/trafficker.git
