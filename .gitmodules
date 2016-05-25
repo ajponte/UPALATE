@@ -1,3 +1,9 @@
 [submodule "trafficker"]
 	path = trafficker
 	url = https://github.com/ajponte/trafficker.git
+[submodule "breaking_bread"]
+	path = breaking_bread
+	url = https://github.com/ajponte/breaking_bread.git
+[submodule "db_java"]
+	path = db_java
+	url = https://github.com/ajponte/db_java
