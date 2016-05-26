@@ -7,3 +7,6 @@
 [submodule "db_java"]
 	path = db_java
 	url = https://github.com/ajponte/db_java
+[submodule "upalatedeploy"]
+	path = upalatedeploy
+	url = https://github.com/ajponte/upalatedeploy.git
