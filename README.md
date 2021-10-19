@@ -16,4 +16,3 @@ The app has two primary goals:
     will trace the supply chain from a user's plate to the 
     farm.
 
-### PLEASE FORK ME ###
